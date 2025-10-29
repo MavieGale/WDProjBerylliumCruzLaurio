@@ -1,6 +1,4 @@
-# WDProjBerylliumCruzLaurio
-
-## 5 Star Genshin Character Guide 2025!
+# 5 Star Genshin Character Guide 2025!
 
 ### Logo:
 ![Logo](./assets/Logo.png)
