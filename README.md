@@ -3,7 +3,7 @@
 ## 5 Star Genshin Character Guide 2025!
 
 ### Logo:
-![Logo](./asset/Logo.png)
+![Logo](./assets/Logo.png)
 
 ### Description:
 #### This website serves as an informative guide about all current five-star characters in Genshin Impact as of 2025. It aims to provide players with detailed character profiles that include their background information, recommended artifact sets based on character attributes/stats, and suggested weapons for great performance. Each character section will also feature an image for easy recognition. 
