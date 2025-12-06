@@ -1,26 +1,47 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Genshin Impact Character Guide">
-    <meta name="keywords" content="Genshin Impact">
-    <title>5-Star Genshin Character Guide</title>
-    <link rel="icon" type="image/x-icon" href="assets/Logo.png">
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet"  href="topnavstyle.css">
-    <style>
-       body {
-            margin: 0;
-            font-family: "DM Sans", sans-serif;
-            background: linear-gradient(#26344d77, #26344d77), 
-                        url("assets/bg about me.jpg") no-repeat top center;
-            background-size: 100%;
+<!DOCTYPE html> 
+<html> 
+    <head> 
+        <meta charset="UTF-8"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <meta name="description" content="Genshin Impact Character Guide"> 
+        <meta name="keywords" content="Genshin Impact"> 
+        <title>5-Star Genshin Character Guide</title> 
+        <link rel="icon" type="image/x-icon" href="assets/Logo.png"> 
+        <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet"> 
+        <link rel="stylesheet" href="topnavstyle.css"> 
+        <style> 
+        body { 
+            margin: 0; 
+            font-family: "DM Sans", sans-serif; 
+            background: linear-gradient(#26344d77, #26344d77), url("assets/bg about me.jpg") 
+            no-repeat top center; 
+            background-size: 100%; 
             background-attachment: fixed;
-        }
-    </style>
-</head>
-
+         } 
+            
+        .center-content { 
+            display: flex; 
+            flex-direction: column; 
+            justify-content: center; 
+            align-items: center; 
+            height: 90vh; 
+            text-align: center; 
+            padding: 20px; 
+            transform: translateY(-130px); 
+        } 
+        .center-image { 
+            width: 1000px; 
+            margin-bottom: 0px; 
+        } 
+        .center-text { 
+            max-width: 1000px; 
+            color: white; 
+            font-size: 20px; 
+            line-height: 1.5; 
+            margin-top: -90px; 
+        } 
+        </style>
+    </head>
 <body>
     <div class="topnav">
         <img src="assets/Logo.png" alt="Logo" class="nav-logo">
@@ -34,6 +55,38 @@
             <img src="assets/Genshn impact logo.png" alt="Genshin Impact Logo">
         </div>
     </div>
+
+    <audio autoplay loop>
+        <source src="Genshinimpactsong.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <div class="center-content">
+        <img src="assets/genshinlogo.png" class="center-image">
+        <p class="center-text">
+            <strong>Genshin Impact is an open-world action RPG where players 
+            explore the vibrant world of Teyvat while following the Traveler’s 
+            search for their lost sibling. The game features elemental combat, 
+            unique characters, and a story that connects different nations inspired 
+            by real cultures. Its mix of exploration, battles, and ongoing updates 
+            keeps players engaged with new adventures.</strong>
+        </p>
+    </div>
+
+    <div class="feature-section">
+    <div class="feature-card">
+        <h2>Title</h2>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipiscing elit. 
+            Sit amet consectetur adipiscing elit quisque faucibus ex. 
+            Adipiscing elit quisque faucibus ex sapien vitae pellentesque.
+        </p>
+    </div>
+
+    <img src="assets/your-image.png" class="feature-image">
+    </div>
+
+
 
 </body>
 </html>
