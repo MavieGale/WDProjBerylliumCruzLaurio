@@ -74,7 +74,19 @@
         <source src="assets/Genshinimpactsong.mp3" type="audio/mpeg">
         Your browser does not support the audio element.
     </audio>    
-
+    <script>  
+        function unmuteMusic() {
+            const music = document.getElementById('bg-music');
+            music.muted = false;      
+            music.volume = 0.5;       
+            document.removeEventListener('click', unmuteMusic);
+            document.removeEventListener('keydown', unmuteMusic);
+            document.removeEventListener('scroll', unmuteMusic);
+        }
+        document.addEventListener('click', unmuteMusic);
+        document.addEventListener('keydown', unmuteMusic);
+        document.addEventListener('scroll', unmuteMusic);
+    </script>
 
     <footer>
         © 2025 Mavie Gale Cruz & Fiona Savannah Laurio | All Rights Reserved | 
