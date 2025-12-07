@@ -8,7 +8,9 @@
         <title>5-Star Genshin Character Guide</title> 
         <link rel="icon" type="image/x-icon" href="assets/Logo.png"> 
         <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet"> 
-        <link rel="stylesheet" href="topnavstyle.css"> 
+        <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="/cssfiles/topnavstyle.css"> 
+        <link rel="stylesheet" href="/cssfiles/featuresection.css">
         <style> 
         body { 
             margin: 0; 
@@ -19,27 +21,35 @@
             background-attachment: fixed;
          } 
             
-        .center-content { 
-            display: flex; 
-            flex-direction: column; 
-            justify-content: center; 
-            align-items: center; 
-            height: 90vh; 
-            text-align: center; 
-            padding: 20px; 
-            transform: translateY(-130px); 
-        } 
+        .center-content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 90vh;
+            text-align: center;
+            padding: 20px;
+            margin-top: -130px; 
+        }
+
         .center-image { 
             width: 1000px; 
             margin-bottom: 0px; 
         } 
+
         .center-text { 
-            max-width: 1000px; 
-            color: white; 
-            font-size: 20px; 
+            max-width: 900px; 
+            color: rgb(255, 255, 255); 
+            font-size: 23px; 
             line-height: 1.5; 
-            margin-top: -90px; 
+            margin-top: -150px; 
         } 
+
+        audio {
+            display: none;
+        }
+
+
         </style>
     </head>
 <body>
@@ -64,29 +74,33 @@
     <div class="center-content">
         <img src="assets/genshinlogo.png" class="center-image">
         <p class="center-text">
-            <strong>Genshin Impact is an open-world action RPG where players 
+            Genshin Impact is an open-world action RPG where players 
             explore the vibrant world of Teyvat while following the Traveler’s 
             search for their lost sibling. The game features elemental combat, 
             unique characters, and a story that connects different nations inspired 
             by real cultures. Its mix of exploration, battles, and ongoing updates 
-            keeps players engaged with new adventures.</strong>
+            keeps players engaged with new adventures.
         </p>
     </div>
 
-    <div class="feature-section">
-    <div class="feature-card">
-        <h2>Title</h2>
-        <p>
-            Lorem ipsum dolor sit amet consectetur adipiscing elit. 
-            Sit amet consectetur adipiscing elit quisque faucibus ex. 
-            Adipiscing elit quisque faucibus ex sapien vitae pellentesque.
-        </p>
+    <h1 class="game-features-title">
+        ✦ ✧ GAME FEATURES ✧ ✦
+    </h1>
+
+    <div class="feature-section1">
+        <img src="assets/owelbl.png" class="feature-label1">
+        <img src="assets/featureframe.png" class="feature-frame1">
     </div>
 
-    <img src="assets/your-image.png" class="feature-image">
+    <div class="feature-section2">
+        <img src="assets/featureframe.png" class="feature-frame2">
+        <img src="assets/combatlbl.png" class="feature-label2">
     </div>
 
-
+    <div class="feature-section3">
+        <img src="assets/cooplbl.png" class="feature-label3">
+        <img src="assets/featureframe.png" class="feature-frame3">
+    </div>
 
 </body>
 </html>

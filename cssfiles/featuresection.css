@@ -1,0 +1,74 @@
+.game-features-title {
+    margin-top: 50px;
+    text-align: center;
+
+    font-family: "Cinzel", serif;
+    font-size: 55px;
+    font-weight: 700;
+    letter-spacing: 3px;
+
+    color: #fff;
+
+    text-shadow:
+        0 0 10px #443b33cc,
+        0 0 3px white
+}
+
+.feature-section1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 80px;
+    position: relative;
+}
+
+.feature-label1 {
+    width: 500px;  
+    z-index: 2;
+    margin-right: -200px;   
+}
+
+.feature-frame1 {
+    width: 600px;   
+    z-index: 1;
+}
+
+.feature-section2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 80px;
+    position: relative;
+}
+
+.feature-frame2 {
+    width: 600px;
+    z-index: 1;
+}
+
+.feature-label2 {
+    width: 500px;
+    z-index: 2;
+    margin-left: -205px; 
+    margin-top: 140px;
+}
+
+.feature-section3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 80px;
+    position: relative;
+}
+
+.feature-label3 {
+    width: 500px;  
+    z-index: 2;
+    margin-right: -200px;  
+    margin-top: -90px; 
+}
+
+.feature-frame3 {
+    width: 600px;   
+    z-index: 1;
+}
