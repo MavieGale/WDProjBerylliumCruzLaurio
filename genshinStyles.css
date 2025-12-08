@@ -18,12 +18,7 @@
     color: #714d43;
     font-family: 'Cinzel Decorative';
     size: 400px;
-}
-
-.mondChar-show{
-    float:right;
-    width:200px;
-    height:500px;
+    margin-top:500px;
 }
 .char.active{
     display:block;
@@ -31,9 +26,16 @@
 
 .char {
   display: none;
-  width: 100%;
-  height: auto;
-  float:right;
+  width: auto;
+  height: 100vw;
+  position: fixed;
+  margin: 0;
+  top:0;
+  left:0;
+  bottom:0;
+  right: 0;
+  transform:scale(0.7);
+  object-fit: contain;
 }
 .navBar{
     width: 100%;
@@ -53,7 +55,18 @@
 .navBar img{
     width:auto;
     height: 50px;
+    transition:2s
+}
 
+.navBar img:hover{
+    transform: scale(1.5)
+}
+
+.charInfo{
+    display:none;
+}
+.info.active{
+    display:block;
 }
 body{
     background-color:white;
