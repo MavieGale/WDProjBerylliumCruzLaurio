@@ -57,3 +57,22 @@ h2 {
     background-color: #26344d;
     position:fixed;
 }
+.navBar img{
+    width:auto;
+    height: 50px;
+    transition:2s
+}
+
+.navBar img:hover{
+    transform: scale(1.5)
+}
+
+.charInfo{
+    display:none;
+}
+.info.active{
+    display:block;
+}
+body{
+    background-color:white;
+}
