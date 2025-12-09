@@ -1,8 +1,10 @@
 body {
     margin: 0;
+    width: 100%;
+    height: 100vh;
     font-family: "DM Sans", sans-serif;
     background-image: url("assets/BgHome.png");
-    background-size: 100%;
+    background-size: cover;
     background-position: top center;
     background-repeat: no-repeat;
     background-attachment: fixed;
