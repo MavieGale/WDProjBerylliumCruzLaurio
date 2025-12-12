@@ -34,6 +34,12 @@ h2 {
     display: block;
 }
 
+.mondCharShow{
+    display:block;
+    margin:auto;
+    width:800px;
+}
+
 .char {
   display: none;
   width: auto;
