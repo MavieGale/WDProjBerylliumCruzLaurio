@@ -25,7 +25,7 @@ function plusDivs(n) {
 
 function showDivs2(n) {
   var i;
-  var x = document.getElementsByClassName("info");
+  var x = document.getElementsByClassName("charInfo");
   if (n > x.length) {slideIndex2 = 1}
   if (n < 1) {slideIndex2 = x.length} ;
   for (i = 0; i < x.length; i++) {
