@@ -16,18 +16,23 @@
 }
 
 
-h1 {
+.info h1 {
     color: #905140;
     font-family: 'Cinzel Decorative';
     font-size: 60px;
     margin-top: 100px;
-    margin-left: 50px;
 }
 
-h2 {
+.info h2 {
     color: #45302a;
+    font-family: 'Cinzel Decorative';
     font-size: 30px;
-    margin-left: 50px;
+}
+
+.info h3 {
+    color: #45302a;
+    font-family: 'Cinzel Decorative';
+    font-size: 23px;
 }
 
 .slide {
@@ -45,17 +50,18 @@ h2 {
 }
 
 .char {
-  width: auto;
-  height: 80vh; /* adjust height */
-  position: relative;
-  top: 10%;       /* controls vertical position */
-  right: 0;       /* sticks it to the right */
-  transform: scale(1.4);
-  object-fit: contain;
+    position: relative; /* or absolute if inside a container */
+    top: 17%; 
+    left: -15%;            /* push to left edge */
+    transform: scale(1.1); 
+    width: auto;
+    height: 80vh;
+    object-fit: contain;
 }
 
-.info{
-    max-width:40%
+.info {
+    max-width: 40%;
+    margin-top: 8vh;  /* 8% of viewport height */
 }
 
 .navBar{
