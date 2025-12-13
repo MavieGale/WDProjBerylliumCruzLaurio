@@ -3,7 +3,6 @@ body {
     font-family: "DM Sans", sans-serif;
     background-image: url("assets/BgHome.png");
     background-size: cover;
-    background-attachment:fixed;
     background-repeat: no-repeat;
     background-color: white;
 }
@@ -48,15 +47,6 @@ body {
     gap: 15px;
 }
 
-.topnav input[type="text"] {
-    padding: 6px 10px;
-    border: none;
-    border-radius: 5px;
-    outline: none;
-    font-size: 14px;
-    font-family: "DM Sans", sans-serif;
-}
-
 .topnav img {
     height: 40px;
 }
@@ -66,13 +56,14 @@ body {
     justify-content: center;
     align-items: center;
     gap: 50px;              
-    margin-top: 250px;
+    margin-top: 40vh;
 }
 
 .nation-btn {
-    width: 160px;          
-    height: auto;          
-    border-radius: 23px;    
+    width: 10vw;
+    max-width: 160px;
+    min-width: 110px;
+    border-radius: 23px;
     transition: 
         transform 0.25s ease,
         filter 0.25s ease;

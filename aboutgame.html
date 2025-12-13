@@ -12,15 +12,12 @@
         <link rel="stylesheet" href="topnavstyle.css"> 
         <link rel="stylesheet" href="featuresection.css">
         <style> 
-        body { 
-            margin: 0; 
-            font-family: "DM Sans", sans-serif; 
-            background: linear-gradient(#26344d77, #26344d77), url("assets/bg about me.jpg") 
-            no-repeat top center; 
-            background-size: 100%; 
-            background-attachment: fixed;
-         } 
-            
+        body {
+            margin: 0;
+            font-family: "DM Sans", sans-serif;
+            background: none;
+        }
+
         .center-content {
             display: flex;
             flex-direction: column;
@@ -29,20 +26,21 @@
             height: 90vh;
             text-align: center;
             padding: 20px;
-            margin-top: -130px; 
+            transform: translateY(-10vh);
         }
 
         .center-image { 
-            width: 1000px; 
-            margin-bottom: 0px; 
+            width: 60vw;
+            max-width: 1000px;
         } 
 
         .center-text { 
-            max-width: 900px; 
+            max-width: 70vw;
+            font-size: 1.4rem;
             color: rgb(255, 255, 255); 
             font-size: 23px; 
             line-height: 1.5; 
-            margin-top: -150px; 
+            transform: translateY(-10vh);
         } 
 
         footer {
@@ -64,8 +62,6 @@
         audio {
             display: none;
         }
-
-
         </style>
     </head>
 <body>
@@ -77,10 +73,14 @@
         <a href="https://www.hoyolab.com/home">HoYoLab</a>
 
         <div class="topnav-right">
-            <input type="text" placeholder="Search">
             <img src="assets/Genshn impact logo.png" alt="Genshin Impact Logo">
         </div>
     </div>
+
+    <div class="bg-fixed"> 
+
+    </div>
+
 
     <audio autoplay loop>
         <source src="Genshinimpactsong.mp3" type="audio/mpeg">

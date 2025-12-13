@@ -1,3 +1,23 @@
+.bg-fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100vw;
+    height: 100vh;
+
+    background-image:
+        linear-gradient(#26344d77, #26344d77),
+        url("assets/bg about me.jpg");
+    background-color: #7a8eb1;
+    background-size: min(90vw, 1400px); 
+    background-repeat: no-repeat;
+    background-position: top center;
+
+    z-index: -1;
+    pointer-events: none;
+}
+
 .game-features-title {
     margin-top: 50px;
     text-align: center;

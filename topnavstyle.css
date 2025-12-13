@@ -6,6 +6,7 @@
     background: rgba(28, 43, 87, 0.9);
     padding: 10px 30px;
     position: relative;
+    z-index: 10;   
 }
 
 .nav-logo {
@@ -37,15 +38,6 @@
     display: flex;
     align-items: center;
     gap: 15px;
-}
-
-.topnav input[type="text"] {
-    padding: 6px 10px;
-    border: none;
-    border-radius: 5px;
-    outline: none;
-    font-size: 14px;
-    font-family: "DM Sans", sans-serif;
 }
 
 .topnav img {
