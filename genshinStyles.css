@@ -88,6 +88,43 @@
     .info h3 { font-size: 2.5vw; }
 }
 
+/* --- Recommended Team / Artifact / Weapon Sections --- */
+.team-icons,
+.artifact-icons,
+.weapon-icons {
+    display: flex;
+    gap: 0.8rem; /* space between icons */
+    margin-top: 0.8rem; /* space from description */
+    flex-wrap: wrap; /* wrap on small screens */
+}
+
+.team-icons img,
+.artifact-icons img,
+.weapon-icons img {
+    width: 50px;   /* adjust size as needed */
+    height: 50px;
+    object-fit: contain;
+    border-radius: 8px; /* optional: rounded corners */
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+}
+
+/* Hover effect */
+.team-icons img:hover,
+.artifact-icons img:hover,
+.weapon-icons img:hover {
+    transform: scale(1.2);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+}
+
+/* Labels (optional) */
+.info .section-label {
+    margin-top: 0.4rem;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #45302a;
+    font-family: 'DM Sans', sans-serif;
+}
 
 .info h1 {
     color: #905140;
@@ -152,7 +189,7 @@
 
 .info {
     position: absolute;
-    top: 15%;          /* roughly aligned with character’s upper body */
+    top: 10%;          /* roughly aligned with character’s upper body */
     left: 45%;         /* tweak this to move closer or further */
     z-index: 2;   
     margin-left: 3vw; /* space between char and text */
@@ -162,7 +199,7 @@
     justify-content: center;
 
     background-color: rgba(255, 255, 255, 0.562); /* solid white */
-    padding: 2rem 2.5rem;
+    padding: 1rem 2.3rem;
     border-radius: 20px;
     box-shadow: 0 8px 25px rgba(0,0,0,0.25);
 }
