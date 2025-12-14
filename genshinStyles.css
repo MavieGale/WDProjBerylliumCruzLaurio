@@ -114,19 +114,7 @@
     width: auto;
     height: 80vh;
     object-fit: contain;
-    right: -40vh;
     flex-shrink: 0; /* prevent shrinking on small screens */
-
-    opacity:0;
-
-     transition:
-     right 0.8s ease-out,
-     opacity 0.6s ease-out;
-}
-
-.char.active{
-    right:0;
-    opacity:1;
 }
 
 .info {
