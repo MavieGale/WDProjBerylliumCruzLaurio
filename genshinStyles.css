@@ -1,3 +1,26 @@
+/* BACKGROUND SLIDESHOW CONTAINER */
+.bg-slideshow {
+    position: fixed;
+    inset: 0;
+    z-index: -10;
+    overflow: hidden;
+}
+
+/* INDIVIDUAL BACKGROUND SLIDES */
+.bg-slide {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 1.5s ease-in-out;
+}
+
+/* ACTIVE SLIDE */
+.bg-slide.active {
+    opacity: 1;
+}
+
 @font-face{
     font-family: 'Cinzel Decorative';
     src: url('../CinzelDecorative-Regular.woff') format('woff');
@@ -76,7 +99,7 @@
 }
 
 .info h2 {
-    color: #45302a;
+    color: #634238;
     font-family: 'Cinzel Decorative';
     font-size: 2vw;
     margin: 0 0 0.3rem 0;
@@ -86,6 +109,12 @@
     color: #45302a;
     font-family: 'DM Sans';
     font-size: 1.5vw;
+    margin: 0;
+}
+.info h4 {
+    color: #1d1412;
+    font-family: 'DM Sans';
+    font-size: 1.2vw;
     margin: 0;
 }
 
@@ -104,6 +133,8 @@
     align-items: center;
     justify-content: flex-start;
     transition: transform 0.6s ease-in-out;
+    z-index: 1;
+    backdrop-filter: blur(3px);
 }
 
 .char {
@@ -119,15 +150,19 @@
 
 .info {
     position: absolute;
-    top: 25%;          /* roughly aligned with character’s upper body */
-    left: 55%;         /* tweak this to move closer or further */
-    max-width: 40%;
+    top: 15%;          /* roughly aligned with character’s upper body */
+    left: 45%;         /* tweak this to move closer or further */
     z-index: 2;   
     margin-left: 3vw; /* space between char and text */
     max-width: 45%;
     display: flex;
     flex-direction: column;
     justify-content: center;
+
+    background-color: rgba(255, 255, 255, 0.562); /* solid white */
+    padding: 2rem 2.5rem;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.25);
 }
 
 .navBar{

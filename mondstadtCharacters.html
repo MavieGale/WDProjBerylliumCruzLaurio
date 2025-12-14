@@ -12,42 +12,14 @@
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
 </head>
 
-<style>
-.bg-slideshow {
-    position: fixed;       /* stay fixed behind content */
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;           /* behind everything */
-    overflow: hidden;
-}
-
-.bg-slideshow .slide {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-size: cover;
-    background-position: center;
-    opacity: 0;
-    transition: opacity 1.5s ease-in-out;
-}
-
-.bg-slideshow .slide.active {
-    opacity: 1;
-}
-</style>
-
 <body>
-   <!-- <div class="bg-slideshow">
-        <div class="slides" style="background-image: url('assets/Mondstadt\ 1.jpg');"></div>
-        <div class="slides" style="background-image: url('assets/Mondstadt\ 2.jpg');"></div>
-        <div class="slides" style="background-image: url('assets/Mondstadt\ 3.png');"></div>
-        <div class="slides" style="background-image: url('assets/Mondstadt\ 4.png');"></div>
-        <div class="slides" style="background-image: url('assets/Mondstadt\ 5.png');"></div>
+    <div class="bg-slideshow">
+        <div class="bg-slide active" style="background-image: url('assets/Mondstadt1.jpg');"></div>
+        <div class="bg-slide" style="background-image: url('assets/Mondstadt2.jpg');"></div>
+        <div class="bg-slide" style="background-image: url('assets/Mondstadt3.png');"></div>
+        <div class="bg-slide" style="background-image: url('assets/Mondstadt4.jpg');"></div>
+        <div class="bg-slide" style="background-image: url('assets/Mondstadt5.jpg');"></div>
     </div>
-
-    -->
 
     <div class="navBar">
         <a href="index.html"><img src="assets/home.png" alt="home-icon"></a>
@@ -66,12 +38,15 @@
 
         <div class="Charshow">
             <div class="slide">
-                <img src="mondstadtChars/jean.png" class="char" id="character">
+            <img src="mondstadtChars/jean.png" class="char" id="character">
                 <div class="info">
                 <h1>Jean</h1>
                 <h2>Leo Minor</h2>
                 <h3>Affiliation: Knights of Favonius</h3>
-                    </div>
+                <h4>As Mondstadt’s Acting Grand Master, Jean shoulders every responsibility with 
+                    unwavering discipline. Her Anemo abilities and sense of duty make her the heart of 
+                    the city’s peace.</h4>
+            </div>
             </div>
 
             <div class="slide">
@@ -80,6 +55,8 @@
                 <h1>Diluc</h1>
                 <h2>Noctua</h2>
                 <h3>Affiliation: Dawn Winery</h3>
+                <h4>The wealthy owner of Dawn Winery, Diluc protects Mondstadt from the shadows as a vigilant and relentless warrior. His refined Pyro 
+                    skills burn with the intensity of his sense of justice.</h4>
             </div>
             </div>
 
@@ -88,7 +65,10 @@
                 <div class="info">
                 <h1>Venti</h1>
                 <h2>Carmen Dei</h2>
-                <h3>Affiliation:</h3>
+                <h3>Affiliation: Barbatos</h3>
+                <h4>A wandering bard with a playful smile, Venti hides the truth of his identity as the Anemo Archon. 
+                    He brings freedom, song, and a lighthearted spirit wherever he goes.
+                </h4>
             </div>
             </div>
 
@@ -98,6 +78,9 @@
                 <h1>Klee</h1>
                 <h2>Trifolium</h2>
                 <h3>Affiliation: Knights of Favonius</h3>
+                <h4>The lively Spark Knight of the Knights of Favonius, Klee is a tiny explosives expert with a big imagination. Her Pyro bombs often cause 
+                    “minor collateral damage,” but everyone adores her energy.</h4>
+
             </div>
             </div>
 
@@ -107,6 +90,8 @@
                 <h1>Mona</h1>
                 <h2>Astrolabos</h2>
                 <h3>Affiliation: Hexenzirkel</h3>
+                <h4> A highly talented astrologist, Mona uses Hydro arts to reveal fate’s secrets. Proud and brilliant, yet perpetually broke, 
+                    she devotes herself fully to understanding the stars.</h4>
             </div>
             </div>
         
@@ -116,14 +101,21 @@
                     <h1>Albedo</h1>
                     <h2>Princeps Cretaceus</h2>
                     <h3>Affiliation: Knights of Favonius</h3>
+                    <h4> The Chief Alchemist of the Knights of Favonius, Albedo is a quiet genius who studies life’s deepest mysteries. 
+                        With Geo mastery and a painter’s precision, he seeks the truth behind creation 
+                        itself.</h4>
                 </div>
+            </div>
 
             <div class="slide">
-            <img src="mondstadtChars/eula.png" alt="eula" class="char" id="character">
-            <div class="info">
-                <h1>Eula</h1>
-                <h2>Aphros Delos</h2>
-                <h3>Affiliation: Knights of Favonius</h3>
+                <img src="mondstadtChars/eula.png" alt="eula" class="char" id="character">
+                <div class="info">
+                    <h1>Eula</h1>
+                    <h2>Aphros Delos</h2>
+                    <h3>Affiliation: Knights of Favonius</h3>
+                    <h4>A descendant of the Lawrence Clan, Eula serves as the Knights of Favonius’ Spindrift Knight. Graceful but fierce, she wields Cryo and a claymore 
+                        to carve out a future free from her family’s infamous past.</h4>
+                </div>
             </div>
 
             <div class="slide">
@@ -132,6 +124,8 @@
                     <h1>Durin</h1>
                     <h2>Draco Rubido</h2>
                     <h3>Affiliation: Hexenzirkel</h3>
+                    <h4>Once a corrupted dragon who fought the Anemo Archon, Durin now exists in a reborn human-like form. Gentle yet powerful, 
+                        he carries remnants of ancient dragon life within him.</h4>
                 </div>
             </div>
 
@@ -144,5 +138,6 @@
     Your browser does not support the audio element.
 </audio>
 <script src="slides.js"></script>
-</script>
+<script src="bg-slides.js"></script>
+
 </body>
