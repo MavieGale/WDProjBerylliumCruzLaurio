@@ -20,3 +20,14 @@ document.addEventListener("keydown", function(e) {
   if(e.key === "ArrowLeft") plusDivs(-1);
   if(e.key === "ArrowRight") plusDivs(1);
 });
+
+function showCharacter(img) {
+  const char = document.getElementById("character");
+
+  char.classList.remove("active");
+
+  setTimeout(() => {
+    char.src = img;
+    char.classList.add("active");
+  }, 50);
+}

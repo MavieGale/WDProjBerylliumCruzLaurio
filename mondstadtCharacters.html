@@ -39,13 +39,15 @@
 </style>
 
 <body>
-    <div class="bg-slideshow">
-        <div class="slide active" style="background-image: url('assets/Mondstadt\ 1.jpg');"></div>
-        <div class="slide" style="background-image: url('assets/Mondstadt\ 2.jpg');"></div>
-        <div class="slide" style="background-image: url('assets/Mondstadt\ 3.png');"></div>
-        <div class="slide" style="background-image: url('assets/Mondstadt\ 4.png');"></div>
-        <div class="slide" style="background-image: url('assets/Mondstadt\ 5.png');"></div>
+   <!-- <div class="bg-slideshow">
+        <div class="slides" style="background-image: url('assets/Mondstadt\ 1.jpg');"></div>
+        <div class="slides" style="background-image: url('assets/Mondstadt\ 2.jpg');"></div>
+        <div class="slides" style="background-image: url('assets/Mondstadt\ 3.png');"></div>
+        <div class="slides" style="background-image: url('assets/Mondstadt\ 4.png');"></div>
+        <div class="slides" style="background-image: url('assets/Mondstadt\ 5.png');"></div>
     </div>
+
+    -->
 
     <div class="navBar">
         <a href="index.html"><img src="assets/home.png" alt="home-icon"></a>
@@ -64,91 +66,83 @@
 
         <div class="Charshow">
             <div class="slide">
-                <img src="mondstadtChars/jean.png" class="char">
+                <img src="mondstadtChars/jean.png" class="char" id="character">
                 <div class="info">
                 <h1>Jean</h1>
-                <h2>Affiliation: Knights of Favonius</h2>
-                <h3>Leo Minor</h3>
+                <h2>Leo Minor</h2>
+                <h3>Affiliation: Knights of Favonius</h3>
                     </div>
             </div>
 
             <div class="slide">
-            <img src="mondstadtChars/diluc.png" alt="diluc" class="char">
+            <img src="mondstadtChars/diluc.png" alt="diluc" class="char" id="character">
             <div class="info">
                 <h1>Diluc</h1>
-                <h2>Affiliation: Dawn Winery</h2>
-                <h3>Noctua</h3>
+                <h2>Noctua</h2>
+                <h3>Affiliation: Dawn Winery</h3>
             </div>
             </div>
 
             <div class="slide">
-            <img src="mondstadtChars/venti.png" alt="venti" class="char">
+            <img src="mondstadtChars/venti.png" alt="venti" class="char" id="character">
                 <div class="info">
                 <h1>Venti</h1>
-                <h2>Affiliation:</h2>
-                <h3>Carmen Dei</h3>
+                <h2>Carmen Dei</h2>
+                <h3>Affiliation:</h3>
             </div>
             </div>
 
             <div class="slide">
-            <img src="mondstadtChars/klee.png" alt ="klee" class="char">
+            <img src="mondstadtChars/klee.png" alt ="klee" class="char" id="character">
             <div class="info">
                 <h1>Klee</h1>
-                <h2>Affiliation: Knights of Favonius</h2>
-                <h3>Trifolium</h3>
+                <h2>Trifolium</h2>
+                <h3>Affiliation: Knights of Favonius</h3>
             </div>
             </div>
 
             <div class="slide">
-                <img src="mondstadtChars/mona.png" alt="mona" class="char">
+                <img src="mondstadtChars/mona.png" alt="mona" class="char" id="character">
                 <div class="info">
                 <h1>Mona</h1>
-                <h2>Affiliation: Hexenzirkel</h2>
-                <h3>Astrolabos</h3>
+                <h2>Astrolabos</h2>
+                <h3>Affiliation: Hexenzirkel</h3>
             </div>
             </div>
         
             <div class="slide">
-                <img src="mondstadtChars/albedo.png" alt="albedo" class="char">
+                <img src="mondstadtChars/albedo.png" alt="albedo" class="char" id="character">
                 <div class="info">
                     <h1>Albedo</h1>
-                    <h2>Affiliation: Knights of Favonius</h2>
+                    <h2>Princeps Cretaceus</h2>
+                    <h3>Affiliation: Knights of Favonius</h3>
                 </div>
 
             <div class="slide">
-            <img src="mondstadtChars/eula.png" alt="eula" class="char">
+            <img src="mondstadtChars/eula.png" alt="eula" class="char" id="character">
             <div class="info">
                 <h1>Eula</h1>
-                <h2>Affiliation: Knights of Favonius</h2>
+                <h2>Aphros Delos</h2>
+                <h3>Affiliation: Knights of Favonius</h3>
             </div>
 
             <div class="slide">
-                <img src="mondstadtChars/durin.png" alt="durin" class="char">
+                <img src="mondstadtChars/durin.png" alt="durin" class="char" id="character">
                 <div class="info">
                     <h1>Durin</h1>
-                    <h2>Affiliation: Hexenzirkel</h2>
+                    <h2>Draco Rubido</h2>
+                    <h3>Affiliation: Hexenzirkel</h3>
                 </div>
             </div>
 
         </div>
         </div>
+
 </div>
 <audio autoplay loop>
     <source src="Mondstadt audio.mp3" type="audio/mpeg">
     Your browser does not support the audio element.
 </audio>
 <script src="slides.js"></script>
-<script>
-    // Automatic background slideshow
-    const bgSlides = document.querySelectorAll('.bg-slideshow .slide');
-    let currentBg = 0;
-
-    function nextBgSlide() {
-        bgSlides[currentBg].classList.remove('active');
-        currentBg = (currentBg + 1) % bgSlides.length;
-        bgSlides[currentBg].classList.add('active');
-    }
-
-    setInterval(nextBgSlide, 5000); // change every 5 seconds
 </script>
 </body>

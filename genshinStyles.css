@@ -8,11 +8,28 @@
 
 
 @font-face {
-    font-family: 'Cinzel Decorative';
+    font-family: 'Cinzel Decorative Black';
     src: url('../fonts/CinzelDecorative-Black.woff2') format('woff2'),
          url('../fonts/CinzelDecorative-Black.woff') format('woff');
     font-weight: 900;
     font-style: normal;
+}
+
+@font-face{
+    font-family: 'DM Sans';
+    src: url('../fonts/DMSans-VariableFont.woff'),
+         url('../fonts/DMSans-VariableFont.woff2');
+    font-weight: 400;
+    font-style: normal;
+
+}
+
+@font-face{
+    font-family: 'DM Sans Italic';
+    src: url('DMSans-Italic-VariableFont.woff'),
+         url('DMSans-Italic-VariableFont.woff2');
+    font-weight: 400;
+    font-style: normal
 }
 
 @media (max-width: 1200px) {
@@ -52,9 +69,10 @@
 .info h1 {
     color: #905140;
     font-family: 'Cinzel Decorative';
-    font-size: 4vw;      /* scales with viewport width */
-    white-space: nowrap;  /* prevent wrapping */
-    margin: 0 0 0.5rem 0;
+    font-size: 4vw;
+    font-weight:700;     
+    white-space: nowrap;  
+    margin-bottom:0;
 }
 
 .info h2 {
@@ -66,7 +84,7 @@
 
 .info h3 {
     color: #45302a;
-    font-family: 'Cinzel Decorative';
+    font-family: 'DM Sans';
     font-size: 1.5vw;
     margin: 0;
 }
@@ -85,6 +103,7 @@
     display: flex;
     align-items: center;
     justify-content: flex-start;
+    transition: transform 0.6s ease-in-out;
 }
 
 .char {
@@ -95,7 +114,19 @@
     width: auto;
     height: 80vh;
     object-fit: contain;
+    right: -40vh;
     flex-shrink: 0; /* prevent shrinking on small screens */
+
+    opacity:0;
+
+     transition:
+     right 0.8s ease-out,
+     opacity 0.6s ease-out;
+}
+
+.char.active{
+    right:0;
+    opacity:1;
 }
 
 .info {
@@ -164,4 +195,5 @@ body{
     margin: 0;
     padding: 0;
     font-family: 'DM Sans', sans-serif;
+
 }
