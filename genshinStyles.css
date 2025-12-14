@@ -15,38 +15,76 @@
     font-style: normal;
 }
 
+@media (max-width: 1200px) {
+    .char {
+        height: 70vh;
+    }
+
+    .info h1 { font-size: 5vw; }
+    .info h2 { font-size: 3vw; }
+    .info h3 { font-size: 2vw; }
+}
+
+@media (max-width: 768px) {
+    .slide {
+        flex-direction: column; /* stack char and info vertically on small screens */
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .info {
+        margin-left: 0;
+        margin-top: 2vh;
+        max-width: 80%;
+    }
+
+    .char {
+        height: 50vh;
+    }
+
+    .info h1 { font-size: 6vw; }
+    .info h2 { font-size: 3.5vw; }
+    .info h3 { font-size: 2.5vw; }
+}
+
 
 .info h1 {
     color: #905140;
     font-family: 'Cinzel Decorative';
-    font-size: 60px;
-    margin-top: 100px;
+    font-size: 4vw;      /* scales with viewport width */
+    white-space: nowrap;  /* prevent wrapping */
+    margin: 0 0 0.5rem 0;
 }
 
 .info h2 {
     color: #45302a;
     font-family: 'Cinzel Decorative';
-    font-size: 30px;
+    font-size: 2vw;
+    margin: 0 0 0.3rem 0;
 }
 
 .info h3 {
     color: #45302a;
     font-family: 'Cinzel Decorative';
-    font-size: 23px;
+    font-size: 1.5vw;
+    margin: 0;
 }
 
 .slide {
-  display: none;      
-  width: 100%;
-  height: 100vh;
-  padding: 0 5vw;
+    display: none;
+    width: 100%;
+    height: 100vh;
+    position: relative; /* or absolute if needed */
+    z-index: 1;         /* low enough so navbar is clickable */
 }
 
-.Charshow{
-    margin:auto;
-    width:100%;
-    min-height: 100vh;
-    object-fit: contain;
+.Charshow {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
 }
 
 .char {
@@ -57,11 +95,20 @@
     width: auto;
     height: 80vh;
     object-fit: contain;
+    flex-shrink: 0; /* prevent shrinking on small screens */
 }
 
 .info {
+    position: absolute;
+    top: 25%;          /* roughly aligned with character’s upper body */
+    left: 55%;         /* tweak this to move closer or further */
     max-width: 40%;
-    margin-top: 8vh;  /* 8% of viewport height */
+    z-index: 2;   
+    margin-left: 3vw; /* space between char and text */
+    max-width: 45%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .navBar{
@@ -75,11 +122,17 @@
     background: #040A14;
     background: radial-gradient(at right bottom, #040A14, #697C9E);
     position:fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000; 
+    display: flex;
+    align-items: center;
+    gap: 15px; /* space between icons */
 }
 .navBar img{
     width:auto;
     height: 50px;
-    transition:1.3s;
+    transition: transform 0.3s;
 }
 
 .navBar img:hover{
@@ -87,6 +140,10 @@
 }
 .switcher{
     overflow: hidden;
+    margin-top: 55px; /* account for fixed navbar */
+    width: 100%;
+    height: calc(100vh - 55px);
+    position: relative;
 }
 
 .w3-button.w3-display-left,
@@ -96,8 +153,15 @@
   transform: translateY(-50%);
   z-index: 10;  
   cursor: pointer;
+    font-size: 3vw; /* scalable arrow size */
 }
 
+.w3-button.w3-display-left { left: 2vw; }
+.w3-button.w3-display-right { right: 2vw; }
+
 body{
-    background-color:white;
+    background-color: white;
+    margin: 0;
+    padding: 0;
+    font-family: 'DM Sans', sans-serif;
 }

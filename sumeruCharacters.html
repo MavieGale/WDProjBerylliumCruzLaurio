@@ -6,74 +6,85 @@
     <meta name="description" content="Genshin Impact Character Guide">
     <meta name="keywords" content="Genshin Impact, Mondstadt, mondstadt">
     <title>5-Star Genshin Character Guide</title>
+
     <link rel="icon" type="image/x-icon" href="assets/Logo.png">
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet"> 
-    <link rel="stylesheet"  href="genshinStyles.css">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="genshinStyles.css">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
 </head>
 
 <body>
+
     <div class="navBar">
-        <a href="index.html">
-            <img src="assets/home.png" alt="home-icon">
-        </a>
-        <a href="mondstadtCharacters.html">
-            <img src="assets/Mondstat symbol.png" alt="mondstadt-icon">
-        </a>
-        <a href="liyueCharacters.html">
-            <img src="assets/Liyue symbol.png" alt="liyue-icon">
-        </a>
-        <a href="inazumaCharacters.html">
-            <img src="assets/inazuma-symbol-trnsp.png" alt="inazuma-icon">
-        </a>
-        <a href="sumeruCharacters.html">
-            <img src="assets/Sumeru symbol.png" alt="sumeru-icon">
-        </a>
-        <a href="fontaineCharacters.html">
-            <img src="assets/Fontaine symbol.png" alt="fontaine-icon">
-        </a>
-        <a href="natlanCharacters.html">
-            <img src="assets/Natlan symbol.png" alt="natlan-icon">
-        </a>
-    </div>
-<div class="switcher">
-    
-    <button class="w3-button w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
-    <button class="w3-button w3-display-right" onclick="plusDivs(+1)">&#10095;</button>
-
-    <div class="Charshow">
-        <img src="sumeruChars/alhaitham.png" alt="alhaitham" class="char active">
-        <img src="sumeruChars/cyno.png" alt="cyno" class ="char">
-        <img src="sumeruChars/dehya.png" alt="dehya" class="char">
-        <img src="sumeruChars/nahida.png" alt ="nahida" class="char">
-        <img src="sumeruChars/nari.png" alt="tighnari" class="char">
-        <img src="sumeruChars/nilou.png" alt="nilou" class="char">
-        <img src="sumeruChars/wanderer.png" alt="eula" class="char">
+        <a href="index.html"><img src="assets/home.png" alt="home-icon"></a>
+        <a href="mondstadtCharacters.html"><img src="assets/Mondstat symbol.png" alt="mondstadt-icon"></a>
+        <a href="liyueCharacters.html"><img src="assets/Liyue symbol.png" alt="liyue-icon"></a>
+        <a href="inazumaCharacters.html"><img src="assets/Inazuma symbol.png" alt="inazuma-icon"></a>
+        <a href="sumeruCharacters.html"><img src="assets/Sumeru symbol.png" alt="sumeru-icon"></a>
+        <a href="fontaineCharacters.html"><img src="assets/Fontaine symbol.png" alt="fontaine-icon"></a>
+        <a href="natlanCharacters.html"><img src="assets/Natlan symbol.png" alt="natlan-icon"></a>
     </div>
 
-    <div class="charInfo">
-        <div class="info active">
-            <h1>Alhaitham</h1>
-            <h2>Affiliation</h2>
-        </div>
-        <div class ="info">
-            <h1>Cyno</h1>
-        </div>
-        <div class ="info">
-            <h1>Dehya</h1>
-        </div>
-        <div class ="info">
-            <h1>Nahida</h1>
-        </div>
-        <div class ="info">
-            <h1>Tighnari</h1>
-        </div>
-        <div class ="info">
-            <h1>Nilou</h1>
-        </div>
-        <div class ="info">
-            <h1>Wanderer</h1>
+    <div class="switcher">
+
+        <button class="w3-button w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+        <button class="w3-button w3-display-right" onclick="plusDivs(+1)">&#10095;</button>
+
+        <div class="Charshow">
+
+            <div class="slide active">
+                <img src="sumeruChars/alhaitham.png" alt="alhaitham" class="char">
+                <div class="info">
+                    <h1>Alhaitham</h1>
+                    <h2>Affiliation</h2>
+                </div>
+            </div>
+
+            <div class="slide">
+                <img src="sumeruChars/cyno.png" alt="cyno" class="char">
+                <div class="info">
+                    <h1>Cyno</h1>
+                </div>
+            </div>
+
+            <div class="slide">
+                <img src="sumeruChars/dehya.png" alt="dehya" class="char">
+                <div class="info">
+                    <h1>Dehya</h1>
+                </div>
+            </div>
+
+            <div class="slide">
+                <img src="sumeruChars/nahida.png" alt="nahida" class="char">
+                <div class="info">
+                    <h1>Nahida</h1>
+                </div>
+            </div>
+
+            <div class="slide">
+                <img src="sumeruChars/nari.png" alt="tighnari" class="char">
+                <div class="info">
+                    <h1>Tighnari</h1>
+                </div>
+            </div>
+
+            <div class="slide">
+                <img src="sumeruChars/nilou.png" alt="nilou" class="char">
+                <div class="info">
+                    <h1>Nilou</h1>
+                </div>
+            </div>
+
+            <div class="slide">
+                <img src="sumeruChars/wanderer.png" alt="wanderer" class="char">
+                <div class="info">
+                    <h1>Wanderer</h1>
+                </div>
+            </div>
+
         </div>
     </div>
-</div>
+
+    <script src="slides.js"></script>
 </body>
+</html>

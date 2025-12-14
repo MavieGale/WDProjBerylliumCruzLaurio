@@ -6,80 +6,86 @@
     <meta name="description" content="Genshin Impact Character Guide">
     <meta name="keywords" content="Genshin Impact, Mondstadt, mondstadt">
     <title>5-Star Genshin Character Guide</title>
+
     <link rel="icon" type="image/x-icon" href="assets/Logo.png">
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet"> 
-    <link rel="stylesheet"  href="genshinStyles.css">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="genshinStyles.css">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
 </head>
 
 <body>
+
     <div class="navBar">
-        <a href="index.html">
-            <img src="assets/home.png" alt="home-icon">
-        </a>
-        <a href="mondstadtCharacters.html">
-            <img src="assets/Mondstat symbol.png" alt="mondstadt-icon">
-        </a>
-        <a href="liyueCharacters.html">
-            <img src="assets/Liyue symbol.png" alt="liyue-icon">
-        </a>
-        <a href="inazumaCharacters.html">
-            <img src="assets/inazuma-symbol-trnsp.png" alt="inazuma-icon">
-        </a>
-        <a href="sumeruCharacters.html">
-            <img src="assets/Sumeru symbol.png" alt="sumeru-icon">
-        </a>
-        <a href="fontaineCharacters.html">
-            <img src="assets/Fontaine symbol.png" alt="fontaine-icon">
-        </a>
-        <a href="natlanCharacters.html">
-            <img src="assets/Natlan symbol.png" alt="natlan-icon">
-        </a>
+        <a href="index.html"><img src="assets/home.png" alt="home-icon"></a>
+        <a href="mondstadtCharacters.html"><img src="assets/Mondstat symbol.png" alt="mondstadt-icon"></a>
+        <a href="liyueCharacters.html"><img src="assets/Liyue symbol.png" alt="liyue-icon"></a>
+        <a href="inazumaCharacters.html"><img src="assets/Inazuma symbol.png" alt="inazuma-icon"></a>
+        <a href="sumeruCharacters.html"><img src="assets/Sumeru symbol.png" alt="sumeru-icon"></a>
+        <a href="fontaineCharacters.html"><img src="assets/Fontaine symbol.png" alt="fontaine-icon"></a>
+        <a href="natlanCharacters.html"><img src="assets/Natlan symbol.png" alt="natlan-icon"></a>
     </div>
 
     <div class="switcher">
-    
+
         <button class="w3-button w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
         <button class="w3-button w3-display-right" onclick="plusDivs(+1)">&#10095;</button>
-    
-        <div class="inazumaCharshow">
-            <img src="mondstadtChars/jean.png" alt="jean" class="char active">
-            <img src="mondstadtChars/diluc.png" alt="diluc" class ="char">
-            <img src="mondstadtChars/venti.png" alt="venti" class="char">
-            <img src="mondstadtChars/klee.png" alt ="klee" class="char">
-            <img src="mondstadtChars/mona.png" alt="mona" class="char">
-            <img src="mondstadtChars/albedo.png" alt="albedo" class="char">
-            <img src="mondstadtChars/eula.png" alt="eula" class="char">
-            <img src="mondstadtChars/durin.png" alt="durin" class="char">
-        </div>
-    
-        <div class="charInfo">
-            <div class="info active">
-                <h1>Jean</h1>
-                <h2>Affiliation</h2>
+
+        <div class="Charshow">
+
+            <div class="slide active">
+                <img src="inazumaChars/itto.png" alt="arataki itto" class="char">
+                <div class="info">
+                    <h1>Arataki Itto</h1>
+                    <h2>Affiliation</h2>
+                </div>
             </div>
-            <div class ="info">
-                <h1>Diluc</h1>
+
+            <div class="slide">
+                <img src="inazumaChars/kazuha.png" alt="kaedehara kazuha" class="char">
+                <div class="info">
+                    <h1>Kaedehara Kazuha</h1>
+                </div>
             </div>
-            <div class ="info">
-                <h1>Venti</h1>
+
+            <div class="slide">
+                <img src="inazumaChars/ayaka.png" alt="kamisato ayaka" class="char">
+                <div class="info">
+                    <h1>Kamisato Ayaka</h1>
+                </div>
             </div>
-            <div class ="info">
-                <h1>Klee</h1>
+
+            <div class="slide">
+                <img src="inazumaChars/ayato.png" alt="kamisato ayato" class="char">
+                <div class="info">
+                    <h1>Kamisato Ayato</h1>
+                </div>
             </div>
-            <div class ="info">
-                <h1>Mona</h1>
+
+            <div class="slide">
+                <img src="inazumaChars/raiden.png" alt="raiden shogun" class="char">
+                <div class="info">
+                    <h1>Raiden Shogun</h1>
+                </div>
             </div>
-            <div class ="info">
-                <h1>Albedo</h1>
+
+            <div class="slide">
+                <img src="inazumaChars/kokomi.png" alt="sangonomiya kokomi" class="char">
+                <div class="info">
+                    <h1>Sangonomiya Kokomi</h1>
+                </div>
             </div>
-            <div class ="info">
-                <h1>Eula</h1>
+
+            <div class="slide">
+                <img src="inazumaChars/yae miko.png" alt="Yae Miko" class="char">
+                <div class="info">
+                    <h1>Yae Miko</h1>
+                </div>
             </div>
-            <div class ="info">
-                <h1>Durin</h1>
-            </div>
+
         </div>
     </div>
-    </body>
+
+    <script src="slides.js"></script>
+</body>
+</html>
     
