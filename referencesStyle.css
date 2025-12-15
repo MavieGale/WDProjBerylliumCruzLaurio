@@ -1,0 +1,32 @@
+.references-section {
+    max-width: 900px;
+    margin: 80px auto 0;
+    padding: 0 20px;
+    font-family: "DM Sans", sans-serif;
+    color: #2f2f2f;
+}
+
+.references-section h1 {
+    font-family: "Cinzel", serif;
+    font-size: 36px;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.references-list {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.references-list li {
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    text-indent: -40px;
+    padding-left: 40px; /* APA hanging indent */
+}
+
+.references-list a {
+    color: #4e4e4e;
+    text-decoration: underline;
+}
