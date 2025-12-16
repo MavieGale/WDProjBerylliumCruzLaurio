@@ -30,7 +30,7 @@
 }
 
 .topnav a.active {
-    border-bottom: 2px solid #f4c542;
+    border-bottom: 2px solid #f4c542; /* the current webpage is highlited with a yellow line*/
 }
 
 .topnav-right {
