@@ -161,7 +161,7 @@
     display: none;
     width: 100%;
     height: 100vh;
-    position: relative; /* or absolute if needed */
+    position: relative; 
     z-index: 1;         /* low enough so navbar is clickable */
 }
 

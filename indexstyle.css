@@ -2,7 +2,7 @@ body {
     margin: 0;
     font-family: "DM Sans", sans-serif;
     background-image: url("assets/BgHome.png");
-    background-size: cover;
+    background-size: cover; /* Scales the image to fully cover the screen */
     background-repeat: no-repeat;
     background-color: white;
 }
@@ -66,12 +66,12 @@ body {
     border-radius: 23px;
     transition: 
         transform 0.25s ease,
-        filter 0.25s ease;
+        filter 0.25s ease; /* Smooth hover animation for zoom and brightness */
 }
 
 .nation-btn:hover {
-    transform: scale(1.12);     
-    filter: brightness(1.20);   
+    transform: scale(1.12); /* Enlarges button slightly on hover */
+    filter: brightness(1.20); /* Increases brightness for visual feedback */
 }
 
 footer {

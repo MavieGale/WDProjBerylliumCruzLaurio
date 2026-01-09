@@ -1,40 +1,64 @@
 # 5 Star Genshin Character Guide 2025!
 
-### Logo:
-![Logo](./assets/Logo.png)
+## Webpage 1: Character Tracker (Form page):
+### Purpose:
+#### The Character Tracker page will serve as the main webpage where users can record their progress and preferences regarding Genshin Impact characters. It allows users to indicate which characters they already own and which characters they wish to obtain. This page collects user input through an interactive HTML form and saves the data locally on the user’s device for later use across the website.
 
-### Description:
-#### This website serves as an informative guide about all current five-star characters in Genshin Impact as of 2025. It aims to provide players with detailed character profiles that include their background information, recommended artifact sets based on character attributes/stats, and suggested weapons for great performance. Each character section will also feature an image for easy recognition. 
+### Type of HTML Form Used:
+#### The webpage uses an HTML form with interactive controls, specifically:
+- Checkboxes for marking characters as Owned or Wanted
+- Buttons for saving and resetting selections
+- Navigation buttons to view filtered results
+#### Each character is represented by a clickable icon, and the checkboxes are visually replaced with:
+- ⭐ Star icon: character is owned
+- ❤️ Heart icon: character is wanted
+#### Although the form uses checkboxes internally, JavaScript is used to control their appearance and behavior for a cleaner design. All character selections are wrapped inside an HTML <form> element to formally collect user input before being processed by JavaScript.
 
-#### Overall, the project’s goal is to create an informative and engaging platform that allows players to both enhance their gameplay and appreciate the depth of each character. The website will be heavy on content, featuring a simple yet attractive interface for those who will use it.
+### How the Form Works:
+#### When a user clicks the star or heart icon beside a character:
 
-### Website Breakdown:
-#### Home Page: 
-> This webpage will feature our logo, the title, clear navigation bar that will link to our different webpages, and 6 naviagtion buttons that will link to the 6 nations. There will also a footer that will include our names, and credits to the surces we got the information from. 
+- The form records the selection as either Owned or Wanted
+- JavaScript saves the selection to localStorage
+- The selected icon remains highlighted to show the user’s choice
 
-#### About Game:
-> This webpage will feature a logo of Genshin Impact with a brief description of the game below. There will also be embedded pictures along with their respective description of the general gameplays. 
+#### Two action buttons are placed at the top or bottom of the page:
 
-#### Redeem Page:
-> This will be linked to the official website of Genshin Impact Redeem Page (https://genshin.hoyoverse.com/en/gift). This is for the players easy access if they wish to redeem a code while looking at our website. 
+- “Show Current Characters”: directs the user to Webpage, which displays only characters marked as owned.
+- “Show Wanted Characters”: directs the user to Webpage 3, which displays only characters marked as wanted.
 
-#### HoYoLab:
-> This will be linked to the official website of HoYoLab made by the same company of Genshin Impact(https://www.hoyolab.com/home). This is for the players easy access as well if they wish to check any updates by the official game while looking at our website. 
+#### These buttons allow smooth and organized navigation between pages.
 
-#### Character List (For All 5 Nations):
-> This will feature the list of characters to their corresponding nations. It will also have a picture and description of the nation, at the side.
+### How and Where the Data Is Saved:
+#### The data collected through the form is saved using the browser’s localStorage, which stores data locally on the user’s device. This method does not require an internet connection or user account, as the data is stored directly in the user’s browser on their computer.
 
-#### Character Dedicated Page:
-> This will feature the following:
-> - Name and affiliation of the character
-> - A brief description of the character
-> - Best-in-slot team for each character (2)
-> - Best artifact set for each character. This features 4 artifacts with 4 substats
-> - Best-in-slot weapons (3)
+#### Each character’s status is stored as a key-value pair, such as:
 
-### Extra notes:
-#### JS incorporation:
-The main logic of our webpage will center around being able to search the character's names through an ID, and using a filter mechanic. This filter mechanic involves sorting the characters by the seven elements according to their vision (Anemo, Geo, Pyro, Cryo, Hydro, Electro, Dendro) and their weapon types (Polearm, Sword, Claymore, Catalyst, Bow).  This will manifest in clicking the icon on the left side of the webpages featuring the nation and its characters. The characters without the desired ID type will be filtered out, and be hidden from display until the user toggles it on. The user will be able to toggle the filters as well. A maximum of three filters can be achieved (nation, weapon type, and element).
+- "Venti": "owned"
+- "Diluc": "wanted"
 
-### Wireframe:
-**Note: Please access this canva link as it has animations as well: https://www.canva.com/design/DAG1ia7H2IY/XbeEpsVcLVqurXoz6OmDsA/edit?utm_content=DAG1ia7H2IY&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton**
+#### The data persists even after the browser is closed and is automatically retrieved when the website is reopened on the same device.
+
+## Webpage 2: My Current Characters Page
+
+### Purpose of the Webpage:
+#### The My Current Characters page displays all Genshin Impact characters that the user has marked as owned on the Character Tracker page. This webpage allows users to easily view and review the characters they currently have without manually searching through each nation page.
+
+### How This Webpage Uses Saved Data:
+#### This webpage retrieves data from the browser’s localStorage, specifically characters that were marked with the ⭐ Star (Owned) option on Webpage 1. Only characters with the status "owned" are displayed. Characters that were not selected or marked as “wanted” are automatically hidden. If no characters have been selected, the webpage will display a message informing the user that no characters are currently recorded, encouraging them to return to the Character Tracker page.
+
+### Navigation:
+#### This webpage is accessed by clicking “Show Current Characters” on the Character Tracker page. A navigation button will also be available to allow users to return to Webpage 1.
+
+## Webpage 3: My Wishlist
+
+### Purpose of the Webpage:
+#### The My Wishlist page displays all Genshin Impact characters that the user has marked as wanted on the Character Tracker page. This webpage allows users to easily view and review the characters they want without manually searching through each nation page.
+
+### How This Webpage Uses Saved Data:
+#### This webpage retrieves data from the browser’s localStorage, specifically characters that were marked with the ❤️ Heart (Wanted) option on Webpage 1. Only characters with the status "wanted" are displayed. Characters that were not selected or marked as “owned” are automatically hidden. If no characters have been selected, the webpage will display a message informing the user that no characters are currently recorded, encouraging them to return to the Character Tracker page.
+
+### Navigation:
+#### This webpage is accessed by clicking “Show Wanted Characters” on the Character Tracker page. A navigation button will also be available to allow users to return to Webpage 1.
+
+
+## Wireframe:
