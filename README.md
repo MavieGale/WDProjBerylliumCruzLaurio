@@ -12,7 +12,8 @@
 #### Each character is represented by a clickable icon, and the checkboxes are visually replaced with:
 - ⭐ Star icon: character is owned
 - ❤️ Heart icon: character is wanted
-#### Although the form uses checkboxes internally, JavaScript is used to control their appearance and behavior for a cleaner design. All character selections are wrapped inside an HTML <form> element to formally collect user input before being processed by JavaScript.
+*Additionally, when clicking characters from both Tracker and Wishlist pages, the user will be redirected to the character's respective information sheet.*
+#### Although the form uses checkboxes internally, JavaScript is used to control their appearance and behavior for a cleaner design. All character selections are wrapped inside an HTML <form> element to formally collect user input before being processed by JavaScript. 
 
 ### How the Form Works:
 #### When a user clicks the star or heart icon beside a character:
