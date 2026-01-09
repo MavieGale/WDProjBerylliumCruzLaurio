@@ -63,3 +63,11 @@
 
 
 ## Wireframe:
+### Webpage 1
+![Webpage 1 wireframe](./assets/WF1.png)
+
+### Webpage 2
+![Webpage 2 wireframe](./assets/WF2.png)
+
+### Webpage 3:
+![Webpage 3 wireframe](./assets/WF3.png)
