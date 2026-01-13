@@ -15,6 +15,11 @@
 *Additionally, when clicking characters from both Tracker and Wishlist pages, the user will be redirected to the character's respective information sheet.*
 #### Although the form uses checkboxes internally, JavaScript is used to control their appearance and behavior for a cleaner design. All character selections are wrapped inside an HTML <form> element to formally collect user input before being processed by JavaScript. 
 
+### Character Tracker Page
+Clicking the webpage will warrant a pop-up log-in page to allow the users to track their current characters and the characters that they want.
+
+The log-in pop-up will ask for the user's email, password, and game UID.
+
 ### How the Form Works:
 #### When a user clicks the star or heart icon beside a character:
 
