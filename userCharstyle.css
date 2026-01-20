@@ -5,6 +5,7 @@ body {
     background-size: cover; 
     background-repeat: no-repeat;
     background-color: white;
+    overflow-x: hidden;
 }
 
 
@@ -98,6 +99,7 @@ button:hover {
   position: relative;
   display: block;
   margin: 20px;
+  overflow-x: hidden;
   overflow-y: auto;
   box-sizing: border-box;
   height: 100vh;
