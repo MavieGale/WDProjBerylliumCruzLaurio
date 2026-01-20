@@ -2,7 +2,7 @@ body {
     margin: 0;
     font-family: "DM Sans", sans-serif;
     background-image: url("assets/CharacterTrackerbg.png");
-    background-size: cover; /* Scales the image to fully cover the screen */
+    background-size: cover; 
     background-repeat: no-repeat;
     background-color: white;
 }
@@ -94,11 +94,14 @@ button:hover {
 }
 
 
-.character {
+ .characterTracker {
   position: relative;
-  display: inline-block;
+  display: block;
   margin: 20px;
-  overflow: hidden;
+  overflow-y: auto;
+  box-sizing: border-box;
+  height: 100vh;
+  width: 33vw;
 }
 
 
@@ -106,6 +109,7 @@ button:hover {
   width: 90px;
   border-radius: 12px;
   cursor: pointer;
+  position: relative;
 }
 
 
@@ -113,7 +117,6 @@ button:hover {
   position: absolute;
   top: 50%;
   left: 110%;
-  transform: translateY(-50%);
 
 
   width: 160px;
@@ -127,14 +130,14 @@ button:hover {
   visibility: hidden;
   transition: opacity 0.25s ease;
 
-
   box-shadow: 0 8px 20px rgba(0,0,0,0.4);
 }
 
 
-.character:hover .hover-card {
+.character .hover-card {
   opacity: 1;
   visibility: visible;
+  transform: translateY(-50%) scale(1.2);
 }
 
 
