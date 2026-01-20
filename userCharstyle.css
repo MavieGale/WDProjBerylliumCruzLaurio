@@ -1,8 +1,10 @@
 body {
-  font-family: 'DM Sans', Arial, sans-serif;
-  margin: 0;
-  min-height: 100vh;
-  background: #f4f4f4;
+    margin: 0;
+    font-family: "DM Sans", sans-serif;
+    background-image: url("assets/CharacterTrackerbg.png");
+    background-size: cover; /* Scales the image to fully cover the screen */
+    background-repeat: no-repeat;
+    background-color: white;
 }
 
 
