@@ -25,17 +25,21 @@ body {
 
 .popup {
   background: #ffffff;
-  padding: 25px;
-  width: 320px;
-  border-radius: 10px;
-  box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+  padding: 3vh;             
+  width: 25vw;              
+  max-width: 90vw;           
+  border-radius: 2vmin;     
+  box-shadow: 0 1vh 2vh rgba(0,0,0,0.3);
   animation: fadeIn 0.3s ease;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
-
 
 .close-btn {
   float: right;
-  font-size: 18px;
+  font-size: 2vmin;         
   cursor: pointer;
   color: #888;
 }
@@ -48,57 +52,49 @@ body {
 
 h1.title {
   text-align: center;
-  margin-bottom: 15px;
+  margin-bottom: 2vh;       
 }
-
 
 fieldset {
-  border: 1px solid #ccc;
-  margin-bottom: 15px;
-  padding: 10px;
+  border: 0.2vmin solid #ccc;
+  margin-bottom: 2vh;
+  padding: 1.5vh;
 }
-
 
 input, select {
   width: 100%;
-  padding: 8px;
-  margin-top: 5px;
+  padding: 1.2vh;
+  margin-top: 1vh;
 }
-
 
 button {
   width: 100%;
-  padding: 10px;
+  padding: 1.5vh;
   background: #ecd186;
   color: #fff;
   border: none;
-  border-radius: 5px;
+  border-radius: 1vmin;
   cursor: pointer;
 }
-
 
 button:hover {
   background: #cea945;
 }
-
 
 @keyframes fadeIn {
   from { opacity: 0; transform: scale(0.9); }
   to { opacity: 1; transform: scale(1); }
 }
 
-
-
 #tracker-section {
   display: none;
-  padding: 30px;
+  padding: 4vh;
 }
 
-
- .characterTracker {
+.characterTracker {
   position: relative;
   display: block;
-  margin: 20px;
+  margin: 3vh;
   overflow-x: hidden;
   overflow-y: auto;
   box-sizing: border-box;
@@ -106,35 +102,30 @@ button:hover {
   width: 33vw;
 }
 
-
 .character-img {
-  width: 90px;
-  border-radius: 12px;
+  width: 12vmin;
+  border-radius: 2vmin;
   cursor: pointer;
   position: relative;
 }
-
 
 .hover-card {
   position: absolute;
   top: 50%;
   left: 110%;
 
-
-  width: 160px;
-  padding: 12px;
-  border-radius: 14px;
+  width: 20vmin;
+  padding: 2vh;
+  border-radius: 2vmin;
   background: rgba(20, 30, 60, 0.95);
   color: white;
-
 
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.25s ease;
 
-  box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+  box-shadow: 0 1vh 2vh rgba(0,0,0,0.4);
 }
-
 
 .character .hover-card {
   opacity: 1;
@@ -142,15 +133,13 @@ button:hover {
   transform: translateY(-50%) scale(1.2);
 }
 
-
 .status {
   display: flex;
   align-items: center;
-  gap: 8px;
-  font-size: 14px;
-  margin-bottom: 8px;
+  gap: 1vmin;
+  font-size: 2vmin;
+  margin-bottom: 1.5vh;
 }
-
 
 .owned {
   color: gold;
@@ -159,4 +148,20 @@ button:hover {
 
 .wanted {
   color: hotpink;
+}
+
+.character.owned::after {
+  content: "⭐";
+  position: absolute;
+  bottom: 5%;
+  right: 5%;
+  font-size: 2vmin;
+}
+
+.character.wanted::after {
+  content: "❤️";
+  position: absolute;
+  bottom: 5%;
+  right: 5%;
+  font-size: 2vmin;
 }
