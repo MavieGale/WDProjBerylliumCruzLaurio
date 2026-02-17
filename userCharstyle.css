@@ -140,28 +140,3 @@ button:hover {
   font-size: 2vmin;
   margin-bottom: 1.5vh;
 }
-
-.owned {
-  color: gold;
-}
-
-
-.wanted {
-  color: hotpink;
-}
-
-.character.owned::after {
-  content: "⭐";
-  position: absolute;
-  bottom: 5%;
-  right: 5%;
-  font-size: 2vmin;
-}
-
-.character.wanted::after {
-  content: "❤️";
-  position: absolute;
-  bottom: 5%;
-  right: 5%;
-  font-size: 2vmin;
-}
