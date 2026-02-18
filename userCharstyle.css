@@ -89,24 +89,81 @@ button:hover {
 #tracker-section {
   display: none;
   padding: 4vh;
+  display: flex;
+  gap: 4vh;
+  align-items: flex-start;
 }
 
-.characterTracker {
-  position: relative;
-  display: block;
-  margin: 3vh;
-  overflow-x: hidden;
-  overflow-y: auto;
-  box-sizing: border-box;
-  height: 100vh;
-  width: 33vw;
+/* LEFT SIDE (All characters) */
+#left {
+  flex: 1;
 }
+
+/* Scroll container */
+.characterTracker {
+  height: 85vh;
+  overflow-y: auto;
+  padding-right: 1vh;
+}
+
+/* RIGHT SIDE (Owned characters) */
+#right {
+  width: 30vw;
+  height: 85vh;
+  overflow-y: auto;
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 2vmin;
+  padding: 2vh;
+  transition: 0.3s ease;
+}
+
+#left h1{
+  font-family: "Cinzel", serif;
+  font-size: 9.2vmin;
+  color: #fff;
+  text-shadow: 0 0 1vh rgba(236, 209, 134, 0.9);
+  margin-bottom: 2vh;
+}
+
+#right h3 {
+  font-family: "Cinzel", serif;
+  font-size: 5vmin;
+  color: rgba(255, 187, 0, 0.9);
+  text-shadow: 0 0 1vh #ffe95c;
+  margin-bottom: 2vh;
+}
+
+#left.drag-over,
+#right.drag-over {
+  background: rgba(255, 255, 255, 0.6);
+  outline: 0.3vmin dashed #cea945;
+}
+
+
+.character {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5vmin;
+}
+
 
 .character-img {
   width: 12vmin;
+  height: 12vmin; 
   border-radius: 2vmin;
-  cursor: pointer;
-  position: relative;
+  cursor: grab;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.character-img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 2.5vh rgba(255, 255, 255, 0.8);
+  filter: brightness(1.25);
+}
+
+.character-img:active {
+  cursor: grabbing;
+  transform: scale(0.95);
 }
 
 .hover-card {
