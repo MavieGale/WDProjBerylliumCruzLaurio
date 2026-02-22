@@ -1,0 +1,67 @@
+/* PAGE BACKGROUND */
+body {
+  margin: 0;
+  font-family: "DM Sans", sans-serif;
+  background-image: url("assets/CharacterTrackerbg.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  overflow-x: hidden;
+}
+
+/* PAGE TITLE */
+h1.page-title {
+  font-family: "Cinzel", serif;
+  font-size: 9vmin;
+  color: #ffffff;
+  text-align: center;
+  margin-top: 6vh;
+  margin-bottom: 4vh;
+  text-shadow: 0 0 1.5vh rgba(236, 209, 134, 0.9);
+}
+/* CHARACTER GRID CONTAINER */
+.character-grid {
+  width: 85%;
+  margin: 0 auto 8vh auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2vmin;
+  justify-content: center;
+}
+
+.character-img {
+  width: 12vmin;
+  height: 12vmin; 
+  border-radius: 2vmin;
+  cursor: grab;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.character-img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 2.5vh rgba(255, 255, 255, 0.8);
+  filter: brightness(1.25);
+}
+
+/* EMPTY MESSAGE */
+.empty-message {
+  text-align: center;
+  font-size: 2.5vmin;
+  color: white;
+  opacity: 0.8;
+  margin-top: 5vh;
+}
+
+button {
+  width: 100%;
+  padding: 1.5vh;
+  background: #ecd186;
+  color: #fff;
+  border: none;
+  border-radius: 1vmin;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #cea945;
+}

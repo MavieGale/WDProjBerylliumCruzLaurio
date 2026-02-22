@@ -15,6 +15,20 @@
 
 </head>
 
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const form = document.getElementById("loginForm");
+
+        form.addEventListener("submit", function(e) {
+            e.preventDefault();
+
+            const email = document.getElementById("email").value;
+            localStorage.setItem("currentUser", email);
+
+            window.location.href = "userCharTrackers.html";
+        });
+    });
+</script>
 
 <body>
 
@@ -41,7 +55,7 @@
             <h1 class="title">Sign-up Page</h1>
 
 
-            <form id="loginForm" action="userCharTrackers.html">
+            <form id="loginForm">
                 <fieldset>
                     <legend>Credentials</legend>
 
@@ -137,6 +151,7 @@
                 </div>
             </div>
         </div>
+
     <audio autoplay loop>
         <source src="Genshinimpactsong.mp3" type="audio/mpeg">
         Your browser does not support the audio element.

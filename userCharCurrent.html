@@ -10,7 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&display=swap" rel="stylesheet">
     <link rel="icon" type="image/x-icon" href="assets/Logo.png">
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="userCharDstyle.css">
+    <link rel="stylesheet" href="userCharListstyle.css">
     <link rel="stylesheet" href="topnavstyle.css"> 
 </head>
 
@@ -34,6 +34,7 @@
 
   <div class="buttons">
     <button onclick="window.location.href='userCharWishlist.html'">Show Wanted Characters</button>
+    <button onclick="window.location.href='userCharTrackers.html'">Go Back To Character Tracker</button>
   </div>
 
   <script>
@@ -94,9 +95,9 @@
       img51: "yoimiya-icon.png",
       img52: "zhongli-icon.png"
     };
-
+    const currentUser = localStorage.getItem("currentUser");
     function loadCharacters(category){
-    const savedData = localStorage.getItem("characterData");
+    const savedData = localStorage.getItem("characterData_" + currentUser);
     console.log("Saved Data:", savedData);
 
     if (!savedData) return;
