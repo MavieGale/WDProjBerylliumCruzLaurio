@@ -11,7 +11,7 @@
     <link rel="icon" type="image/x-icon" href="assets/Logo.png">
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="userCharTrackerstyle.css">
-    <link rel="stylesheet" href="topnavstyle.css"> 
+    <link rel="stylesheet" href="topnavstyle.css">   
 
 </head>
 
@@ -101,130 +101,6 @@
         </div>
     </div>
 
-
-    <!-- JAVASCRIPT -->
-   <script>
-    let data = {
-        owned: [],
-        wanted: []
-    };
-    const currentUser = localStorage.getItem("currentUser");
-    const leftBox = document.getElementById("left");
-    const ownedBox = document.getElementById("owned-box");
-    const wantedBox = document.getElementById("wanted-box");
-    const characters = document.querySelectorAll(".character-img");
-    
-    //BRING BACK TO THE LEFT
-    leftBox.addEventListener("dragover", function(e) {
-    e.preventDefault();
-    });
-
-    // LOAD FROM LOCAL STORAGE
-    function loadData() {
-    const saved = localStorage.getItem("characterData");
-    if (saved) {
-        data = JSON.parse(saved);
-    }
-
-    // Move owned characters
-    data.owned.forEach(id => {
-        const img = document.getElementById(id);
-        if (img) ownedBox.appendChild(img);
-    });
-
-    // Move wanted characters
-    data.wanted.forEach(id => {
-        const img = document.getElementById(id);
-        if (img) wantedBox.appendChild(img);
-    });
-    }
-
-    // SAVE FUNCTION
-    function saveData() {
-        if (!currentUser) return;
-        localStorage.setItem("characterData_" + currentUser, JSON.stringify(data));
-    }
-
-    // DRAG START
-    characters.forEach(img => {
-        img.addEventListener("dragstart", function(e) {
-        e.dataTransfer.setData("text/plain", this.id); // store id
-        });
-    });
-
-    // ALLOW DROP
-    [ownedBox, wantedBox].forEach(box => {
-        box.addEventListener("dragover", function(e) {
-            e.preventDefault();
-        });
-    });
-
-    // DROP LOGIC
-    ownedBox.addEventListener("drop", function(e) {
-        e.preventDefault();
-        const id = e.dataTransfer.getData("text/plain");
-        const img = document.getElementById(id);
-
-        if (!data.owned.includes(id)) data.owned.push(id);
-        data.wanted = data.wanted.filter(i => i !== id);
-
-        if (img) ownedBox.appendChild(img);
-        saveData();
-    });
-
-    wantedBox.addEventListener("drop", function(e) {
-        e.preventDefault();
-        const id = e.dataTransfer.getData("text/plain");
-        const img = document.getElementById(id);
-
-        if (!data.wanted.includes(id)) data.wanted.push(id);
-        data.owned = data.owned.filter(i => i !== id); // FIXED LINE
-
-        if (img) wantedBox.appendChild(img);
-        saveData();
-    });
-
-    leftBox.addEventListener("drop", function(e) {
-    e.preventDefault();
-    const id = e.dataTransfer.getData("text/plain");
-    const img = document.getElementById(id);
-
-    // Remove from both arrays
-    data.owned = data.owned.filter(i => i !== id);
-    data.wanted = data.wanted.filter(i => i !== id);
-
-    // Move back to original container
-    const characterContainer = document.querySelector(".character");
-    if (img && characterContainer) {
-        characterContainer.appendChild(img);
-    }
-
-    saveData();
-    });
-
-    function loadData() {
-    if (!currentUser) return;
-
-    const saved = localStorage.getItem("characterData_" + currentUser);
-    if (saved) {
-        data = JSON.parse(saved);
-    }
-
-    data.owned.forEach(id => {
-        const img = document.getElementById(id);
-        if (img) ownedBox.appendChild(img);
-    });
-
-    data.wanted.forEach(id => {
-        const img = document.getElementById(id);
-        if (img) wantedBox.appendChild(img);
-    });
-    }
-
-    // LOAD ON START
-    window.addEventListener("DOMContentLoaded", loadData);
-        </script>
-    
      <div class="buttons">
         <button onclick="window.location.href='userCharCurrent.html'">Show Current Characters</button>
         <button onclick="window.location.href='userCharWishlist.html'">Show Wanted Characters</button>
@@ -234,6 +110,78 @@
         <source src="Genshinimpactsong.mp3" type="audio/mpeg">
         Your browser does not support the audio element.
     </audio>
-      
+
+    <script src="userCharTracker.js"></script>
+
+  <footer>
+      © 2025 Mavie Gale Cruz & Fiona Savannah Laurio | All Rights Reserved | 
+      <a href="https://genshin.hoyoverse.com/en/home?utm_source=fab&utm_medium=home" target="_blank">
+          Official Genshin Impact Website
+      </a>
+
+        <section class="references-section">
+        <h1>References</h1>
+        <ul class="references-list">
+            <li><em>Genshin Impact – Step into a vast magical world for adventure (Mondstadt)</em>. (n.d.-a). 
+                <a href="https://genshin.hoyoverse.com/en/character/mondstadt?char=0" target="_blank">
+                    https://genshin.hoyoverse.com/en/character/mondstadt?char=0
+                </a>
+            </li>
+
+            <li><em>Genshin Impact – Step into a vast magical world for adventure (Liyue)</em>. (n.d.-b). 
+                <a href="https://genshin.hoyoverse.com/en/character/liyue?char=0" target="_blank">
+                    https://genshin.hoyoverse.com/en/character/liyue?char=0
+                </a>
+            </li>
+
+            <li><em>Genshin Impact – Step into a vast magical world for adventure (Inazuma)</em>. (n.d.-c). 
+                <a href="https://genshin.hoyoverse.com/en/character/inazuma?char=0" target="_blank">
+                    https://genshin.hoyoverse.com/en/character/inazuma?char=0
+                </a>
+            </li>
+
+            <li><em>Genshin Impact – Step into a vast magical world for adventure (Sumeru)</em>. (n.d.-d). 
+                <a href="https://genshin.hoyoverse.com/en/character/sumeru?char=0" target="_blank">
+                    https://genshin.hoyoverse.com/en/character/sumeru?char=0
+                </a>
+            </li>
+
+            <li><em>Genshin Impact – Step into a vast magical world for adventure (Fontaine)</em>. (n.d.-e). 
+                <a href="https://genshin.hoyoverse.com/en/character/Fontaine?char=0" target="_blank">
+                    https://genshin.hoyoverse.com/en/character/Fontaine?char=0
+                </a>
+            </li>
+
+            <li>
+                <em>Genshin Impact – Step into a vast magical world for adventure (Natlan)</em>. (n.d.-f). 
+                <a href="https://genshin.hoyoverse.com/en/character/Natlan?char=0" target="_blank">
+                    https://genshin.hoyoverse.com/en/character/Natlan?char=0
+                </a>
+            </li>
+
+            <li>Team, G. I. W. (2025, December 11). <em>Genshin Impact Walkthrough & Guides Wiki｜Game8</em>. Game8｜the Top Gaming and App Walkthroughs Straight From Japan! <a href="https://game8.co/games/Genshin-Impact" target="_blank">https://game8.co/games/Genshin-Impact</a></li>
+            <li>W3Schools.com. (n.d.-a). <a href="https://www.w3schools.com/howto/howto_js_slideshow.asp" target="_blank">https://www.w3schools.com/howto/howto_js_slideshow.asp</a></li>
+            <li>W3Schools.com. (n.d.-b). <a href="https://www.w3schools.com/html/html_images.asp" target="_blank">https://www.w3schools.com/html/html_images.asp</a></li>
+            <li>W3Schools.com. (n.d.-c). <a href="https://www.w3schools.com/cssref/sel_hover.php" target="_blank">https://www.w3schools.com/cssref/sel_hover.php</a></li>
+            <li>W3Schools.com. (n.d.-d). <a href="https://www.w3schools.com/tags/att_audio_autoplay.asp" target="_blank">https://www.w3schools.com/tags/att_audio_autoplay.asp</a></li>
+            <li>W3Schools.com. (n.d.-e). <a href="https://www.w3schools.com/JS/js_htmldom_eventlistener.asp" target="_blank">https://www.w3schools.com/JS/js_htmldom_eventlistener.asp</a></li>
+            <li>W3Schools.com. (n.d.-f). <a href="https://www.w3schools.com/w3css/w3css_slideshow.asp" target="_blank">https://www.w3schools.com/w3css/w3css_slideshow.asp</a></li>
+            <li>W3Schools.com. (n.d.-g). <a href="https://www.w3schools.com/css/css_navbar_horizontal.asp" target="_blank">https://www.w3schools.com/css/css_navbar_horizontal.asp</a></li>
+            <li>W3Schools.com. (n.d.-h). <a href="https://www.w3schools.com/css/css3_buttons.asp" target="_blank">https://www.w3schools.com/css/css3_buttons.asp</a></li>
+            <li>W3Schools.com. (n.d.-i). <a href="https://www.w3schools.com/css/css_website_layout.asp" target="_blank">https://www.w3schools.com/css/css_website_layout.asp</a></li>
+            <li>W3Schools.com. (n.d.-j). <a href="https://www.w3schools.com/cssref/atrule_media.php" target="_blank">https://www.w3schools.com/cssref/atrule_media.php</a></li>
+            <li>W3Schools.com. (n.d.-k). <a href="https://www.w3schools.com/cssref/atrule_font-face.php" target="_blank">https://www.w3schools.com/cssref/atrule_font-face.php</a></li>
+            <li>
+                OpenAI. (2025, December 15). <em>Slideshow with JS</em> [Generative AI chat]. GPT-4o. 
+                <a href="https://chatgpt.com/share/6940298a-4934-8003-ad16-df99a49ee36e" target="_blank">
+                    https://chatgpt.com/share/6940298a-4934-8003-ad16-df99a49ee36e
+                </a>
+            </li>
+         </ul>
+
+    </section>
+
+  </footer>
+
 </body>
 </html>

@@ -15,21 +15,6 @@
 
 </head>
 
-<script>
-    document.addEventListener("DOMContentLoaded", function() {
-        const form = document.getElementById("loginForm");
-
-        form.addEventListener("submit", function(e) {
-            e.preventDefault();
-
-            const email = document.getElementById("email").value;
-            localStorage.setItem("currentUser", email);
-
-            window.location.href = "userCharTrackers.html";
-        });
-    });
-</script>
-
 <body>
 
     <div class="topnav">
@@ -39,7 +24,7 @@
         <a href= "active" href= "userCharTrackers.html">Character Tracker</a>
         <a href="https://genshin.hoyoverse.com/en/gift">Redeem Page</a>
         <a href="https://www.hoyolab.com/home">HoYoLab</a>
-        <a href="references.html">References</a>
+
 
         <div class="topnav-right">
             <img src="assets/Genshn impact logo.png" alt="Genshin Impact Logo">
@@ -156,6 +141,8 @@
         <source src="Genshinimpactsong.mp3" type="audio/mpeg">
         Your browser does not support the audio element.
     </audio>
-
+    
+    <script src="userCharDirectory.js"></script>
+ 
 </body>
 </html>

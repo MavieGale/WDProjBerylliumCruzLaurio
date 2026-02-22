@@ -12,6 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="userCharListstyle.css">
     <link rel="stylesheet" href="topnavstyle.css"> 
+
 </head>
 
 <body>
@@ -37,100 +38,77 @@
     <button onclick="window.location.href='userCharTrackers.html'">Go Back To Character Tracker</button>
   </div>
 
-  <script>
-    const grid = document.getElementById("character-grid");
+  <script src="userCharWishlist.js"></script>
 
-    // Map old IDs (img1, img2, ...) to actual filenames
-    const idToFile = {
-      img1: "albedo-icon.png",
-      img2: "alhaitham-icon.png",
-      img3: "arle-icon.png",
-      img4: "ayaka-icon.png",
-      img5: "ayato-icon.png",
-      img6: "baizhu-icon.png",
-      img7: "chasca-icon.png",
-      img8: "chiori-icon.png",
-      img9: "citlali-icon.png",
-      img10: "clorinde-icon.png",
-      img11: "cyno-icon.png",
-      img12: "dehya-icon.png",
-      img13: "diluc-icon.png",
-      img14: "durin-icon.png",
-      img15: "emilie-icon.png",
-      img16: "escoffier-icon.png",
-      img17: "eula-icon.png",
-      img18: "furina-icon.png",
-      img19: "ganyu-icon.png",
-      img20: "hu tao-icon.png",
-      img21: "itto-icon.png",
-      img22: "jean-icon.png",
-      img23: "kazuha-icon.png",
-      img24: "keqing-icon.png",
-      img25: "kinich-icon.png",
-      img26: "klee-icon.png",
-      img27: "kokomi-icon.png",
-      img28: "lyney-icon.png",
-      img29: "mavuika-icon.png",
-      img30: "mizuki-icon.png",
-      img31: "mona-icon.png",
-      img32: "mualani-icon.png",
-      img33: "nahida-icon.png",
-      img34: "navia-icon.png",
-      img35: "neuvi-icon.png",
-      img36: "nilou-icon.png",
-      img37: "raiden-icon.png",
-      img38: "shenhe-icon.png",
-      img39: "sigewinne-icon.png",
-      img40: "skirk-icon.png",
-      img41: "tartaglia-icon.png",
-      img42: "tighnari-icon.png",
-      img43: "varessa-icon.png",
-      img44: "venti-icon.png",
-      img45: "wanderer-icon.png",
-      img46: "wriothesley-icon.png",
-      img47: "xianyun-icon.png",
-      img48: "xiao-icon.png",
-      img49: "xilonen-icon.png",
-      img50: "yaemiko-icon.png",
-      img51: "yoimiya-icon.png",
-      img52: "zhongli-icon.png"
-    };
+  <footer>
+      © 2025 Mavie Gale Cruz & Fiona Savannah Laurio | All Rights Reserved | 
+      <a href="https://genshin.hoyoverse.com/en/home?utm_source=fab&utm_medium=home" target="_blank">
+          Official Genshin Impact Website
+      </a>
 
-    const currentUser = localStorage.getItem("currentUser");
-    function loadCharacters(category){
-    const savedData = localStorage.getItem("characterData_" + currentUser);
-    console.log("Saved Data:", savedData);
+          <section class="references-section">
+        <h1>References</h1>
+        <ul class="references-list">
+            <li><em>Genshin Impact – Step into a vast magical world for adventure (Mondstadt)</em>. (n.d.-a). 
+                <a href="https://genshin.hoyoverse.com/en/character/mondstadt?char=0" target="_blank">
+                    https://genshin.hoyoverse.com/en/character/mondstadt?char=0
+                </a>
+            </li>
 
-    if (!savedData) return;
+            <li><em>Genshin Impact – Step into a vast magical world for adventure (Liyue)</em>. (n.d.-b). 
+                <a href="https://genshin.hoyoverse.com/en/character/liyue?char=0" target="_blank">
+                    https://genshin.hoyoverse.com/en/character/liyue?char=0
+                </a>
+            </li>
 
-    const data = JSON.parse(savedData);
-    console.log("Parsed Data:", data);
+            <li><em>Genshin Impact – Step into a vast magical world for adventure (Inazuma)</em>. (n.d.-c). 
+                <a href="https://genshin.hoyoverse.com/en/character/inazuma?char=0" target="_blank">
+                    https://genshin.hoyoverse.com/en/character/inazuma?char=0
+                </a>
+            </li>
 
-    if (!data[category]) {
-        console.log("Category not found:", category);
-        return;
+            <li><em>Genshin Impact – Step into a vast magical world for adventure (Sumeru)</em>. (n.d.-d). 
+                <a href="https://genshin.hoyoverse.com/en/character/sumeru?char=0" target="_blank">
+                    https://genshin.hoyoverse.com/en/character/sumeru?char=0
+                </a>
+            </li>
 
-    }
+            <li><em>Genshin Impact – Step into a vast magical world for adventure (Fontaine)</em>. (n.d.-e). 
+                <a href="https://genshin.hoyoverse.com/en/character/Fontaine?char=0" target="_blank">
+                    https://genshin.hoyoverse.com/en/character/Fontaine?char=0
+                </a>
+            </li>
 
-    grid.innerHTML = "";
+            <li>
+                <em>Genshin Impact – Step into a vast magical world for adventure (Natlan)</em>. (n.d.-f). 
+                <a href="https://genshin.hoyoverse.com/en/character/Natlan?char=0" target="_blank">
+                    https://genshin.hoyoverse.com/en/character/Natlan?char=0
+                </a>
+            </li>
 
-    data[category].forEach(id => {
-        console.log("Loading:", id, "→", idToFile[id]);
+            <li>Team, G. I. W. (2025, December 11). <em>Genshin Impact Walkthrough & Guides Wiki｜Game8</em>. Game8｜the Top Gaming and App Walkthroughs Straight From Japan! <a href="https://game8.co/games/Genshin-Impact" target="_blank">https://game8.co/games/Genshin-Impact</a></li>
+            <li>W3Schools.com. (n.d.-a). <a href="https://www.w3schools.com/howto/howto_js_slideshow.asp" target="_blank">https://www.w3schools.com/howto/howto_js_slideshow.asp</a></li>
+            <li>W3Schools.com. (n.d.-b). <a href="https://www.w3schools.com/html/html_images.asp" target="_blank">https://www.w3schools.com/html/html_images.asp</a></li>
+            <li>W3Schools.com. (n.d.-c). <a href="https://www.w3schools.com/cssref/sel_hover.php" target="_blank">https://www.w3schools.com/cssref/sel_hover.php</a></li>
+            <li>W3Schools.com. (n.d.-d). <a href="https://www.w3schools.com/tags/att_audio_autoplay.asp" target="_blank">https://www.w3schools.com/tags/att_audio_autoplay.asp</a></li>
+            <li>W3Schools.com. (n.d.-e). <a href="https://www.w3schools.com/JS/js_htmldom_eventlistener.asp" target="_blank">https://www.w3schools.com/JS/js_htmldom_eventlistener.asp</a></li>
+            <li>W3Schools.com. (n.d.-f). <a href="https://www.w3schools.com/w3css/w3css_slideshow.asp" target="_blank">https://www.w3schools.com/w3css/w3css_slideshow.asp</a></li>
+            <li>W3Schools.com. (n.d.-g). <a href="https://www.w3schools.com/css/css_navbar_horizontal.asp" target="_blank">https://www.w3schools.com/css/css_navbar_horizontal.asp</a></li>
+            <li>W3Schools.com. (n.d.-h). <a href="https://www.w3schools.com/css/css3_buttons.asp" target="_blank">https://www.w3schools.com/css/css3_buttons.asp</a></li>
+            <li>W3Schools.com. (n.d.-i). <a href="https://www.w3schools.com/css/css_website_layout.asp" target="_blank">https://www.w3schools.com/css/css_website_layout.asp</a></li>
+            <li>W3Schools.com. (n.d.-j). <a href="https://www.w3schools.com/cssref/atrule_media.php" target="_blank">https://www.w3schools.com/cssref/atrule_media.php</a></li>
+            <li>W3Schools.com. (n.d.-k). <a href="https://www.w3schools.com/cssref/atrule_font-face.php" target="_blank">https://www.w3schools.com/cssref/atrule_font-face.php</a></li>
+            <li>
+                OpenAI. (2025, December 15). <em>Slideshow with JS</em> [Generative AI chat]. GPT-4o. 
+                <a href="https://chatgpt.com/share/6940298a-4934-8003-ad16-df99a49ee36e" target="_blank">
+                    https://chatgpt.com/share/6940298a-4934-8003-ad16-df99a49ee36e
+                </a>
+            </li>
+         </ul>
 
-        if (!idToFile[id]) {
-        console.log("Missing mapping for:", id);
-        return;
-        }
+    </section>
 
-        const img = document.createElement("img");
-        img.src = `teamIcons/${idToFile[id]}`;
-        img.alt = id;
-        img.className = "character-img";
-        grid.appendChild(img);
-        });
-    } 
-    loadCharacters("wanted");
+  </footer>
 
-  </script>
 </body>
 </html>
