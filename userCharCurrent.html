@@ -55,7 +55,7 @@
       img12: "dehya-icon.png",
       img13: "diluc-icon.png",
       img14: "durin-icon.png",
-      img15: "emilie_icon.png",
+      img15: "emilie-icon.png",
       img16: "escoffier-icon.png",
       img17: "eula-icon.png",
       img18: "furina-icon.png",
@@ -73,7 +73,7 @@
       img30: "mizuki-icon.png",
       img31: "mona-icon.png",
       img32: "mualani-icon.png",
-      img33: "nahida_icon.png",
+      img33: "nahida-icon.png",
       img34: "navia-icon.png",
       img35: "neuvi-icon.png",
       img36: "nilou-icon.png",
@@ -95,24 +95,40 @@
       img52: "zhongli-icon.png"
     };
 
-    function loadCurrentCharacters() {
-      const savedData = localStorage.getItem("characterData");
-      if (!savedData) return;
+    function loadCharacters(category){
+    const savedData = localStorage.getItem("characterData");
+    console.log("Saved Data:", savedData);
 
-      const data = JSON.parse(savedData);
+    if (!savedData) return;
 
-      data.owned.forEach(id => {
-        if (!idToFile[id]) return; // skip if mapping missing
+    const data = JSON.parse(savedData);
+    console.log("Parsed Data:", data);
+
+    if (!data[category]) {
+        console.log("Category not found:", category);
+        return;
+
+    }
+
+    grid.innerHTML = "";
+
+    data[category].forEach(id => {
+        console.log("Loading:", id, "→", idToFile[id]);
+
+        if (!idToFile[id]) {
+        console.log("Missing mapping for:", id);
+        return;
+        }
 
         const img = document.createElement("img");
         img.src = `teamIcons/${idToFile[id]}`;
         img.alt = id;
         img.className = "character-img";
         grid.appendChild(img);
-      });
-    }
+        });
+    } 
+    loadCharacters("owned");
 
-    window.addEventListener("DOMContentLoaded", loadCurrentCharacters);
   </script>
 </body>
 </html>
