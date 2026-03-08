@@ -75,15 +75,15 @@ The purpose of deleting data is to allow the user to reset their Character Wishl
 
 
 ## Wireframes:
-### User Log In
+### Webpage 1 (User Log In)
 ![User Log In wireframe](./assets/WF4.png)
 
-### Webpage 1
+### Webpage 2
 ![Webpage 1 wireframe](./assets/WF1.png)
 
-### Webpage 2
+### Webpage 3
 ![Webpage 2 wireframe](./assets/WF2.png)
 
-### Webpage 3
+### Webpage 4
 ![Webpage 3 wireframe](./assets/WF3.png)
 
