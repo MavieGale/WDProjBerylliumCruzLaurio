@@ -37,11 +37,6 @@ The log-in pop-up will ask for the user's email, password, and game UID.
 ### How and Where the Data Is Saved:
 #### The data collected through the form is saved using the browser’s localStorage, which stores data locally on the user’s device. This method does not require an internet connection or user account, as the data is stored directly in the user’s browser on their computer.
 
-#### Each character’s status is stored as a key-value pair, such as:
-
-- "Venti": "owned"
-- "Diluc": "wanted"
-
 #### The data persists even after the browser is closed and is automatically retrieved when the website is reopened on the same device.
 
 ## Webpage 2: My Current Characters Page
@@ -66,6 +61,15 @@ The log-in pop-up will ask for the user's email, password, and game UID.
 ### Navigation:
 #### This webpage is accessed by clicking “Show Wanted Characters” on the Character Tracker page. A navigation button will also be available to allow users to return to Webpage 1.
 
+# FINAL MODIFICATION PROPOSAL
+### Updating of Data
+
+## Deletion of Data
+### 
+### Purpose of Deletion of Data
+Its purpose is to clear the data in the Character Wishlist and Character Tracker. This ensures that the user can have a fresh start in choosing and tracking their characters.
+
+
 
 ## Wireframes:
 ### User Log In
@@ -79,3 +83,7 @@ The log-in pop-up will ask for the user's email, password, and game UID.
 
 ### Webpage 3
 ![Webpage 3 wireframe](./assets/WF3.png)
+
+### Updating Data
+
+### Deleting Data
