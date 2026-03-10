@@ -2,60 +2,21 @@ body {
     margin: 0;
     font-family: "DM Sans", sans-serif;
     background-image: url("assets/BgHome.png");
-    background-size: cover; /* Scales the image to fully cover the screen */
+    background-size: cover;
     background-repeat: no-repeat;
     background-color: white;
+
+    animation: fadeIn 1.2s ease-in-out;
 }
 
-.topnav {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    background: rgba(28, 43, 87, 0.9);
-    padding: 10px 30px;
-    position: relative;
-}
 
-.nav-logo {
-    height: 40px;
-    margin-right: 15px;
-    vertical-align: middle;
-}
-
-.topnav a {
-    color: white;
-    text-decoration: none;
-    padding: 12px 18px;
-    font-weight: 500;
-    transition: 0.3s;
-    font-size: 16px;
-}
-
-.topnav a:hover {
-    background-color: rgba(255, 255, 255, 0.15);
-    border-radius: 6px;
-}
-
-.topnav a.active {
-    border-bottom: 2px solid #f4c542;
-}
-
-.topnav-right {
-    margin-left: auto;
-    display: flex;
-    align-items: center;
-    gap: 15px;
-}
-
-.topnav img {
-    height: 40px;
-}
+/* NATION BUTTONS */
 
 .nation-buttons {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 50px;              
+    gap: 4vw;
     margin-top: 40vh;
 }
 
@@ -64,29 +25,37 @@ body {
     max-width: 160px;
     min-width: 110px;
     border-radius: 23px;
-    transition: 
-        transform 0.25s ease,
-        filter 0.25s ease; /* Smooth hover animation for zoom and brightness */
+
+    transition: transform 0.25s ease, filter 0.25s ease;
+
+    /* starting state for animation */
+    opacity: 0;
+    transform: translateY(25px);
+
+    animation: buttonAppear 0.8s ease forwards;
 }
 
 .nation-btn:hover {
-    transform: scale(1.12); /* Enlarges button slightly on hover */
-    filter: brightness(1.20); /* Increases brightness for visual feedback */
+    transform: scale(1.12);
+    filter: brightness(1.20);
 }
 
-footer {
-    text-align: center;
-    color: #4e4e4e;
-    font-size: 14px;
-    padding: 20px 10px;
-    position: static; 
-    margin-top: 190px; 
-    background:white;
+/* BUTTON ANIMATION */
+
+@keyframes buttonAppear {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
-footer a {
-    color: #4e4e4e;
-    text-decoration: none;
-    font-weight: 500;
-}
+/* PAGE FADE IN */
 
+@keyframes fadeIn{
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
