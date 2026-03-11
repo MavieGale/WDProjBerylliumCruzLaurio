@@ -6,7 +6,7 @@ body {
     background-repeat: no-repeat;
     background-color: white;
 
-    animation: fadeIn 1.2s ease-in-out;
+    animation: fadePageIn 1.2s ease-in-out;
 }
 
 
@@ -20,29 +20,39 @@ body {
     margin-top: 40vh;
 }
 
+/* NATION BUTTON */
+
 .nation-btn {
     width: 10vw;
     max-width: 160px;
     min-width: 110px;
-    border-radius: 23px;
+    border-radius: 1.5vw;
 
-    transition: transform 0.25s ease, filter 0.25s ease;
-
-    /* starting state for animation */
+    /* starting animation state */
     opacity: 0;
-    transform: translateY(25px);
+    transform: translateY(4vh);
 
-    animation: buttonAppear 0.8s ease forwards;
+    animation: buttonAppear 0.8s ease-out forwards;
+
+    transition: 
+        transform 0.25s ease,
+        filter 0.25s ease;
 }
+
+/* HOVER EFFECT */
 
 .nation-btn:hover {
-    transform: scale(1.12);
-    filter: brightness(1.20);
+    transform: translateY(0) scale(1.12);
+    filter: brightness(1.2);
 }
 
-/* BUTTON ANIMATION */
+/* BUTTON ENTRANCE ANIMATION */
 
 @keyframes buttonAppear {
+    from {
+        opacity: 0;
+        transform: translateY(4vh);
+    }
     to {
         opacity: 1;
         transform: translateY(0);
@@ -51,7 +61,7 @@ body {
 
 /* PAGE FADE IN */
 
-@keyframes fadeIn{
+@keyframes fadePageIn{
     from {
         opacity: 0;
     }
