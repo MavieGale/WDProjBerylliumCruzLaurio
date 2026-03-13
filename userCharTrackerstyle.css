@@ -6,6 +6,7 @@ body {
     background-repeat: no-repeat;
     background-color: white;
     overflow-x: hidden;
+    animation: fadeIn 1.2s ease-in-out;
 }
 
 h1 {
@@ -41,11 +42,6 @@ button {
 
 button:hover {
   background: #cea945;
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; transform: scale(0.9); }
-  to { opacity: 1; transform: scale(1); }
 }
 
 
@@ -173,20 +169,9 @@ footer a {
     font-weight: 500;
 }
 
-.references-list {
-    list-style-type: none;
-    padding-left: 0;
-}
-
-.references-list li {
-    font-size: 16px;
-    line-height: 1.8;
-    margin-bottom: 20px;
-    text-indent: -40px;
-    padding-left: 40px; /* APA hanging indent */
-}
-
-.references-list a {
-    color: #4e4e4e;
-    text-decoration: underline;
-}
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.10); }
+    to { opacity: 1; transform: scale(0.10); }
+  }
+  
+  

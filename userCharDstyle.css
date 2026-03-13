@@ -37,18 +37,6 @@ body {
   transform: translate(-50%, -50%);
 }
 
-.close-btn {
-  float: right;
-  font-size: 2vmin;         
-  cursor: pointer;
-  color: #888;
-}
-
-
-.close-btn:hover {
-  color: #000;
-}
-
 
 h1.title {
   text-align: center;
@@ -56,14 +44,14 @@ h1.title {
 }
 
 fieldset {
-  border: 0.2vmin solid #ccc;
+  border: 0.15vmin solid #ccc;
   margin-bottom: 2vh;
   padding: 1.5vh;
 }
 
 input, select {
   width: 100%;
-  padding: 1.2vh;
+  padding: 1vh;
   margin-top: 1vh;
 }
 
