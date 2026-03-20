@@ -1,60 +1,75 @@
-let data = {
+document.addEventListener("DOMContentLoaded", function () {
+
+    // GET CURRENT USER
+    const currentUserObj = JSON.parse(localStorage.getItem("currentUser"));
+
+    if (!currentUserObj) {
+        window.location.href = "userCharDirectory.html";
+        return;
+    }
+
+    const currentUser = currentUserObj.uid;
+
+    // DISPLAY USER INFO
+    document.getElementById("display-nickname").innerText = currentUserObj.nickname;
+    document.getElementById("display-uid").innerText = "UID: " + currentUserObj.uid;
+
+    const profile = document.querySelector(".user-profile-header");
+        profile.addEventListener("click", function () {
+            profile.classList.toggle("active");
+        });
+
+    // DATA STRUCTURE
+    let data = {
         owned: [],
         wanted: []
     };
-    const currentUser = localStorage.getItem("currentUser");
+
+    // ELEMENTS
     const leftBox = document.getElementById("left");
     const ownedBox = document.getElementById("owned-box");
     const wantedBox = document.getElementById("wanted-box");
     const characters = document.querySelectorAll(".character-img");
-    
-    //BRING BACK TO THE LEFT
-    leftBox.addEventListener("dragover", function(e) {
-    e.preventDefault();
-    });
 
-    // LOAD FROM LOCAL STORAGE
+    // LOAD DATA 
     function loadData() {
-    const saved = localStorage.getItem("characterData");
-    if (saved) {
-        data = JSON.parse(saved);
+        const saved = localStorage.getItem("characterData_" + currentUser);
+        if (saved) {
+            data = JSON.parse(saved);
+        }
+
+        data.owned.forEach(id => {
+            const img = document.getElementById(id);
+            if (img) ownedBox.appendChild(img);
+        });
+
+        data.wanted.forEach(id => {
+            const img = document.getElementById(id);
+            if (img) wantedBox.appendChild(img);
+        });
     }
 
-    // Move owned characters
-    data.owned.forEach(id => {
-        const img = document.getElementById(id);
-        if (img) ownedBox.appendChild(img);
-    });
-
-    // Move wanted characters
-    data.wanted.forEach(id => {
-        const img = document.getElementById(id);
-        if (img) wantedBox.appendChild(img);
-    });
-    }
-
-    // SAVE FUNCTION
+    // SAVE DATA
     function saveData() {
-        if (!currentUser) return;
         localStorage.setItem("characterData_" + currentUser, JSON.stringify(data));
     }
 
     // DRAG START
     characters.forEach(img => {
-        img.addEventListener("dragstart", function(e) {
-        e.dataTransfer.setData("text/plain", this.id); // store id
+        img.addEventListener("dragstart", function (e) {
+            e.dataTransfer.setData("text/plain", this.id);
         });
     });
 
     // ALLOW DROP
-    [ownedBox, wantedBox].forEach(box => {
-        box.addEventListener("dragover", function(e) {
+    [ownedBox, wantedBox, leftBox].forEach(box => {
+        box.addEventListener("dragover", function (e) {
             e.preventDefault();
         });
     });
 
-    // DROP LOGIC
-    ownedBox.addEventListener("drop", function(e) {
+    // DROP -> OWNED
+    ownedBox.addEventListener("drop", function (e) {
         e.preventDefault();
         const id = e.dataTransfer.getData("text/plain");
         const img = document.getElementById(id);
@@ -66,54 +81,60 @@ let data = {
         saveData();
     });
 
-    wantedBox.addEventListener("drop", function(e) {
+    // DROP -> WANTED
+    wantedBox.addEventListener("drop", function (e) {
         e.preventDefault();
         const id = e.dataTransfer.getData("text/plain");
         const img = document.getElementById(id);
 
         if (!data.wanted.includes(id)) data.wanted.push(id);
-        data.owned = data.owned.filter(i => i !== id); // FIXED LINE
+        data.owned = data.owned.filter(i => i !== id);
 
         if (img) wantedBox.appendChild(img);
         saveData();
     });
 
-    leftBox.addEventListener("drop", function(e) {
-    e.preventDefault();
-    const id = e.dataTransfer.getData("text/plain");
-    const img = document.getElementById(id);
-
-    // Remove from both arrays
-    data.owned = data.owned.filter(i => i !== id);
-    data.wanted = data.wanted.filter(i => i !== id);
-
-    // Move back to original container
-    const characterContainer = document.querySelector(".character");
-    if (img && characterContainer) {
-        characterContainer.appendChild(img);
-    }
-
-    saveData();
-    });
-
-    function loadData() {
-    if (!currentUser) return;
-
-    const saved = localStorage.getItem("characterData_" + currentUser);
-    if (saved) {
-        data = JSON.parse(saved);
-    }
-
-    data.owned.forEach(id => {
+    // DROP -> BACK TO LEFT
+    leftBox.addEventListener("drop", function (e) {
+        e.preventDefault();
+        const id = e.dataTransfer.getData("text/plain");
         const img = document.getElementById(id);
-        if (img) ownedBox.appendChild(img);
+
+        data.owned = data.owned.filter(i => i !== id);
+        data.wanted = data.wanted.filter(i => i !== id);
+
+        const container = document.querySelector(".character");
+        if (img && container) {
+            container.appendChild(img);
+        }
+
+        saveData();
     });
 
-    data.wanted.forEach(id => {
-        const img = document.getElementById(id);
-        if (img) wantedBox.appendChild(img);
-    });
+    //  RESET BUTTON
+    const resetBtn = document.getElementById("reset-btn");
+
+    if (resetBtn) {
+        resetBtn.addEventListener("click", function () {
+            const confirmReset = confirm("Are you sure you want to reset your tracker?");
+
+            if (confirmReset) {
+                localStorage.removeItem("characterData_" + currentUser);
+
+                data = { owned: [], wanted: [] };
+
+                window.location.reload();
+            }
+        });
     }
 
     // LOAD ON START
-    window.addEventListener("DOMContentLoaded", loadData);
+    loadData();
+});
+
+
+// LOGOUT FUNCTION 
+function logoutUser() {
+    localStorage.removeItem("currentUser");
+    window.location.href = "login.html";
+}
