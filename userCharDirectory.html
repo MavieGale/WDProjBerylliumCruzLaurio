@@ -10,37 +10,39 @@
      <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&display=swap" rel="stylesheet">
     <link rel="icon" type="image/x-icon" href="assets/Logo.png">
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="userCharstyle.css">
+    <link rel="stylesheet" href="userCharDstyle.css">
+    <link rel="stylesheet" href="topnavstyle.css"> 
 
 </head>
 
-
 <body>
+
+    <div class="topnav">
+        <img src="assets/Logo.png" alt="Logo" class="nav-logo">
+        <a href="index.html">Home</a>
+        <a class="aboutgame.html">About Game</a>
+        <a href= "active" href= "userCharTrackers.html">Character Tracker</a>
+        <a href="https://genshin.hoyoverse.com/en/gift">Redeem Page</a>
+        <a href="https://www.hoyolab.com/home">HoYoLab</a>
+
+
+        <div class="topnav-right">
+            <img src="assets/Genshn impact logo.png" alt="Genshin Impact Logo">
+        </div>
+    </div>
 
     <!-- LOGIN POPUP -->
     <div class="overlay" id="popupOverlay">
         <div class="popup">
-            <span class="close-btn" id="closePopup">&times;</span>
-
-
             <h1 class="title">Sign-up Page</h1>
-
 
             <form id="loginForm">
                 <fieldset>
                     <legend>Credentials</legend>
 
-                    <label>Email
-                        <input type="email" id="email" required>
+                    <label>Nickname
+                        <input type="nickname" id="nickname" required>
                     </label><br><br>
-
-
-                    <label>Password
-                        <input type="password" required>
-                    </label>
-                </fieldset>
-
-                <fieldset>
                     <label>Server
                         <select required>
                             <option value="" disabled selected></option>
@@ -50,9 +52,8 @@
                             <option>TW, HK, MO</option>
                         </select>
                     </label><br><br>
-
                     <label>UID
-                        <input type="number" required>
+                        <input type="number" id="UID" required>
                     </label><br><br>
                 </fieldset>
                 <button type="submit">Log In</button>
@@ -81,7 +82,7 @@
                 <img src="teamIcons/dehya-icon.png" alt="dehya" draggable="true" class="character-img" id="img12">
                 <img src="teamIcons/diluc-icon.png" alt="diluc" draggable="true" class="character-img" id="img13">
                 <img src="teamIcons/durin-icon.png" alt="durin" draggable="true" class="character-img" id="img14">
-                <img src="teamIcons/emilie_icon.png" alt="emilie" draggable="true" class="character-img" id ="img15">
+                <img src="teamIcons/emilie-icon.png" alt="emilie" draggable="true" class="character-img" id ="img15">
                 <img src="teamIcons/escoffier-icon.png" alt= "escoffier " draggable ="true " class ="character-img " id ="img16">
                 <img src="teamIcons/eula-icon.png" alt ="eula " draggable ="true " class ="character-img " id ="img17">
                 <img src="teamIcons/furina-icon.png" alt="furina" draggable="true" class="character-img" id="img18">
@@ -99,7 +100,7 @@
                 <img src="teamIcons/mizuki-icon.png" alt="mizuki" draggable="true" class="character-img" id ="img30">
                 <img src="teamIcons/mona-icon.png" alt="mona" draggable="true" class="character-img" id ="img31">
                 <img src="teamIcons/mualani-icon.png" alt="mualani" draggable ="true " class ="character-img " id ="img32">
-                <img src ="teamIcons/nahida_icon.png " alt ="nahida " draggable ="true " class ="character-img " id ="img33">
+                <img src ="teamIcons/nahida-icon.png " alt ="nahida " draggable ="true " class ="character-img " id ="img33">
                 <img src ="teamIcons/navia-icon.png " alt ="navia " draggable ="true " class ="character-img " id ="img34">
                 <img src="teamIcons/neuvi-icon.png" alt="neuvilette" draggable="true" class="character-img" id="img35">
                 <img src="teamIcons/nilou-icon.png" alt="nilou" draggable="true" class="character-img" id="img36">
@@ -122,3 +123,13 @@
                 </div>
             </div>
         </div>
+
+    <audio autoplay loop>
+        <source src="Genshinimpactsong.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    
+    <script src="userCharDirectory.js"></script>
+ 
+</body>
+</html>

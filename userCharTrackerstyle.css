@@ -1,0 +1,278 @@
+body {
+    margin: 0;
+    font-family: "DM Sans", sans-serif;
+    background-image: url("assets/CharacterTrackerbg.png");
+    background-size: cover; 
+    background-repeat: no-repeat;
+    background-color: white;
+    overflow-x: hidden;
+    animation: fadeIn 1.2s ease-in-out;
+}
+
+
+h1 {
+  text-align: center;
+  font-family: "Cinzel", serif;
+  font-size: 9.2vmin;
+  color: #fff;
+  text-shadow: 0 0 1vh rgba(255, 255, 255, 0.9);
+  margin-bottom: 1vh;     
+}
+
+fieldset {
+  border: 0.2vmin solid #ccc;
+  margin-bottom: 2vh;
+  padding: 1.5vh;
+}
+
+input, select {
+  width: 100%;
+  padding: 1.2vh;
+  margin-top: 1vh;
+}
+
+button {
+    width: auto;    
+    margin-left: 15px;
+    margin-right: 15px;
+    font-family: "DM Sans", sans-serif;
+    font-weight: bold;
+    font-size: 1.3rem;
+    padding: 1.5vh;
+    background: #0b0f3b;
+    color: #fff;
+    border: none;
+    border-radius: 2vmin;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #adaafb;
+}
+
+.start-over-btn {
+    margin-top: 2vh;   
+    margin-left: 4vh;  
+    margin-right: auto; 
+    
+    padding: 1.5vh 3vh;
+    background: #f6e54f; 
+    color: #fff;
+    border: none;
+    border-radius: 2vmin;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.start-over-btn:hover {
+    background: #b09236; 
+}
+
+
+/* LEFT + RIGHT CONTAINER */
+#tracker-section {
+    display: none; /* hidden until login */
+    padding: 4vh;
+    display: flex;
+    gap: 4vh;
+    align-items: flex-start;
+}
+
+/* LEFT SIDE (All characters) */
+#left {
+    flex: 1;
+}
+
+/* SCROLLABLE CHARACTER GRID */
+.characterTracker {
+    height: 50vh;
+    overflow-y: auto;
+    padding-right: 1vh;
+}
+
+/* CHARACTER IMAGE GRID */
+.character {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5vmin;
+    position: relative;
+}
+
+/* RIGHT SIDE BOXES */
+#right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 4vh;
+}
+
+/* OWNED / WANTED BOX STYLING */
+.drop-zone {
+    height: 35vh;
+    overflow-y: auto;
+    background: rgba(255, 255, 255, 0.505);
+    border-radius: 2vmin;
+    padding: 2vh;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5vmin;
+    transition: 0.3s ease;
+}
+
+.drop-zone h3 {
+    width: 100%;
+    font-family: "Cinzel", serif;
+    font-size: 5vmin;
+    color: #141922;
+    margin-bottom: 2vh;
+    pointer-events: none;
+}
+
+/* DRAG OVER EFFECT */
+.drop-zone.drag-over {
+    background: rgba(255, 255, 255, 0.6);
+    outline: 0.3vmin dashed #cea945;
+}
+
+/* CHARACTER IMAGE */
+.character-img {
+    width: 12vmin;
+    height: 12vmin;
+    border-radius: 2vmin;
+    cursor: grab;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.character-img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 2.5vh rgba(255, 255, 255, 0.8);
+    filter: brightness(1.25);
+}
+
+.character-img:active {
+    cursor: grabbing;
+    transform: scale(0.95);
+}
+
+/* HOVER CARD */
+.hover-card {
+    position: absolute;
+    top: 50%;
+    left: 110%;
+    width: 20vmin;
+    padding: 2vh;
+    border-radius: 2vmin;
+    background: rgba(20, 30, 60, 0.95);
+    color: white;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.25s ease;
+    box-shadow: 0 1vh 2vh rgba(0,0,0,0.4);
+}
+
+.character:hover .hover-card {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(-50%) scale(1);
+}
+
+.user-profile-header {
+    position: absolute;
+    top: 6vh;
+    left: 2vw;
+    font-family: "DM Sans", sans-serif;
+}
+
+.user-trigger {
+    color: white;
+    cursor: pointer;
+
+    display: flex;
+    flex-direction: column;
+}
+
+/* NICKNAME (BIG) */
+#display-nickname {
+    margin-top: 2vh;
+    font-size: 2.8vmin;
+    font-weight: bold;
+}
+
+/* UID (SMALL UNDER) */
+#display-uid {
+    font-size: 1.8vmin;
+    opacity: 0.8;
+}
+
+/* ARROW */
+.arrow {
+    margin-top: 1.6vh;
+    position: absolute;
+    right: 0.1vh;
+    top: 1.5vh;
+    font-size: 1.5vmin;
+}
+
+/* DROPDOWN */
+.dropdown-menu a {
+    display: block;
+    text-decoration: none;
+    color: white;
+    font-size: 2vmin;
+    padding: 0.8vh 0;
+    cursor: pointer;
+}
+
+/* hover effect */
+.dropdown-menu a:hover {
+    color: #ecd186;
+}
+
+/* SHOW DROPDOWN */
+.user-profile-header.active .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+/* LINE */
+.dropdown-menu hr {
+  border: none;
+  border-top: 0.1vmin solid rgba(255,255,255,0.3);
+  margin: 1vh 0;
+}
+
+/* DROPDOWN CONTAINER */
+.dropdown-menu {
+  position: absolute;
+  top: 100%;     
+  left: 0;
+
+  background: rgba(0, 0, 0, 0.75);
+  padding: 1.5vh 2vh;
+  border-radius: 1vmin;
+
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(1vh);
+  transition: 0.2s ease;
+}
+
+
+footer {
+    text-align: center;
+    color: #4e4e4e;
+    font-size: 14px;
+    padding: 20px 10px;
+    position: static; 
+    margin-top: 190px; 
+    background:white;
+}
+
+footer a {
+    color: #4e4e4e;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+  
