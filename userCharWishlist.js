@@ -56,7 +56,9 @@ const grid = document.getElementById("character-grid");
       img52: "zhongli-icon.png"
     };
 
-    const currentUser = localStorage.getItem("currentUser");
+    const currentUserObj = JSON.parse(localStorage.getItem("currentUser"));
+    const currentUser = currentUserObj ? currentUserObj.uid : null;
+    
     function loadCharacters(category){
     const savedData = localStorage.getItem("characterData_" + currentUser);
     console.log("Saved Data:", savedData);
@@ -69,7 +71,6 @@ const grid = document.getElementById("character-grid");
     if (!data[category]) {
         console.log("Category not found:", category);
         return;
-
     }
 
     grid.innerHTML = "";
@@ -78,8 +79,8 @@ const grid = document.getElementById("character-grid");
         console.log("Loading:", id, "→", idToFile[id]);
 
         if (!idToFile[id]) {
-        console.log("Missing mapping for:", id);
-        return;
+            console.log("Missing mapping for:", id);
+            return;
         }
 
         const img = document.createElement("img");
