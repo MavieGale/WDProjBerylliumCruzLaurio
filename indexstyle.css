@@ -27,23 +27,14 @@ body {
     max-width: 160px;
     min-width: 110px;
     border-radius: 1.5vw;
-
-    /* starting animation state */
-    opacity: 0;
-    transform: translateY(4vh);
-
-    animation: buttonAppear 0.8s ease-out forwards;
-
     transition: 
         transform 0.25s ease,
         filter 0.25s ease;
 }
 
-/* HOVER EFFECT */
-
 .nation-btn:hover {
-    transform: translateY(0) scale(1.12);
-    filter: brightness(1.2);
+    transform: scale(1.12); /* Enlarges button slightly on hover */
+    filter: brightness(1.40); /* Increases brightness for visual feedback */
 }
 
 /* BUTTON ENTRANCE ANIMATION */
