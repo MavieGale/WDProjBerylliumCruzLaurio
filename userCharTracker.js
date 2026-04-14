@@ -135,6 +135,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // LOGOUT FUNCTION 
 function logoutUser() {
-    localStorage.removeItem("currentUser");
+    localStorage.clear();
     window.location.href = "login.html";
 }
